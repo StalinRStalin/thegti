@@ -1,337 +1,259 @@
 <!DOCTYPE html>
-<html>
+<html lang="en" data-theme="dark">
 <head>
-  <meta charset="utf-8">
-  <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-0KVQ5PMHNQ"></script>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The GTI</title>
+<meta name="description" content="Posts on general technical data and analytics">
+<link rel="stylesheet" href="/css/main.css">
 <script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-0KVQ5PMHNQ');
+  // Prevent flash of wrong theme
+  (function(){
+    var t = localStorage.getItem('gti-theme') ||
+      (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+    document.documentElement.setAttribute('data-theme', t);
+  })();
 </script>
-  
-  <title>The GTI</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="Posts on general technical data and analytics">
-<meta property="og:type" content="website">
-<meta property="og:title" content="The GTI">
-<meta property="og:url" content="https://thegti.xyz/page/14/index.html">
-<meta property="og:site_name" content="The GTI">
-<meta property="og:description" content="Posts on general technical data and analytics">
-<meta property="og:locale" content="en_US">
-<meta property="article:author" content="R Stalin">
-<meta name="twitter:card" content="summary">
-  
-    <link rel="alternate" href="/atom.xml" title="The GTI" type="application/atom+xml">
-  
-  
-    <link rel="shortcut icon" href="/favicon.png">
-  
-  
-  
-<link rel="stylesheet" href="/css/style.css">
+<div id="google_translate_element" style="display:none"></div>
+<script>
+  function googleTranslateElementInit() {
+    new google.translate.TranslateElement({
+      pageLanguage: 'ta',
+      includedLanguages: 'en,ta,hi,kn,ml,te,zh-CN,es,fr,de,ru,ar,ja',
+      autoDisplay: false
+    }, 'google_translate_element');
+  }
+</script>
+<script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit" async></script>
 
-  
-    
-<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
-
-  
-  
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fork-awesome@1.2.0/css/fork-awesome.min.css">
-
-<!-- hexo injector head_end start --><script defer src="https://umami-production-af63.up.railway.app/script.js" data-website-id="c10692f6-309a-4c2f-a3d4-3b66ac48eb5f"></script><!-- hexo injector head_end end --><meta name="generator" content="Hexo 7.3.0"></head>
-
+  <script type="module" src="https://unpkg.com/@dotlottie/player-component@2.7.12/dist/dotlottie-player.mjs"></script>
+<meta name="generator" content="Hexo 7.3.0"></head>
 <body>
-  <div id="container">
-    <div id="wrap">
-      <header id="header">
-  <div id="banner"></div>
-  <div id="header-outer" class="outer">
-    <div id="header-title" class="inner">
-      <h1 id="logo-wrap">
-        <a href="/" id="logo"></a>
-      </h1>
-      
-        <h2 id="subtitle-wrap">
-          <a href="/" id="subtitle"></a>
-        </h2>
-      
-    </div>
-    <div id="header-inner" class="inner">
-      <nav id="main-nav">
-        <a id="main-nav-toggle" class="nav-icon"><span class="fa fa-bars"></span></a>
-        
-          <a class="main-nav-link" href="/">Home</a>
-        
-          <a class="main-nav-link" href="/archives">Archives</a>
-        
-      </nav>
-      <nav id="sub-nav">
-        
-        
-          <a class="nav-icon" href="/atom.xml" title="RSS Feed"><span class="fa fa-rss"></span></a>
-        
-        <a class="nav-icon nav-search-btn" title="Search"><span class="fa fa-search"></span></a>
-      </nav>
-      <div id="search-form-wrap">
-        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://thegti.xyz"></form>
-      </div>
-    </div>
+  <!-- Lottie intro overlay — shown only on first visit -->
+  <div id="lottie-intro-overlay" style="display:none">
+    <dotlottie-player
+      id="lottie-welcome"
+      src="/lottie-welcome.lottie"
+      autoplay
+      loop="false"
+      speed="1"
+    ></dotlottie-player>
+    <dotlottie-player
+      id="lottie-player"
+      src="/lottie-intro.lottie"
+      autoplay
+      loop
+      speed="1"
+    ></dotlottie-player>
+    <button id="lottie-continue-btn">Continue to thegti.xyz ›</button>
+  </div>
+
+  <div id="reading-progress"></div>
+  <header class="site-header">
+  <div class="banner-container">
+    <img src="/images/hero-banner-dark.png" alt="The GTI" class="header-banner banner-dark">
+    <img src="/images/hero-banner-light.png" alt="The GTI" class="header-banner banner-light">
+  </div>
+  <div class="site-top-row">
+    <nav class="site-nav notranslate">
+      <ul class="nav-links">
+        <li><a href="/">Home</a></li>
+        <li><a href="/archives">Archives</a></li>
+        <li><a href="/about">About</a></li>
+      </ul>
+    </nav>
   </div>
 </header>
 
-      <div class="outer">
-        <section id="main">
-  
-    <article id="post-கோவில்களில்-ஆற்றல்-சிகிச்சை" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="site-wrapper">
+    <div class="site-main">
+  <main class="post-feed">
+    
+      <article class="article-card">
   <div class="article-meta">
-    <a href="/2025/08/10/%E0%AE%95%E0%AF%87%E0%AE%BE%E0%AE%B5%E0%AE%BF%E0%AE%B2%E0%AF%8D%E0%AE%95%E0%AE%B3%E0%AE%BF%E0%AE%B2%E0%AF%8D-%E0%AE%86%E0%AE%B1%E0%AF%8D%E0%AE%B1%E0%AE%B2%E0%AF%8D-%E0%AE%9A%E0%AE%BF%E0%AE%95%E0%AE%BF%E0%AE%9A%E0%AF%8D%E0%AE%9A%E0%AF%88/" class="article-date">
-  <time class="dt-published" datetime="2025-08-09T20:44:26.000Z" itemprop="datePublished">10-08-2025</time>
-</a>
+    <span class="article-date">12 · 08 · 2025</span>
     
   </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
   
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/2025/08/10/%E0%AE%95%E0%AF%87%E0%AE%BE%E0%AE%B5%E0%AE%BF%E0%AE%B2%E0%AF%8D%E0%AE%95%E0%AE%B3%E0%AE%BF%E0%AE%B2%E0%AF%8D-%E0%AE%86%E0%AE%B1%E0%AF%8D%E0%AE%B1%E0%AE%B2%E0%AF%8D-%E0%AE%9A%E0%AE%BF%E0%AE%95%E0%AE%BF%E0%AE%9A%E0%AF%8D%E0%AE%9A%E0%AF%88/">கோவில்களில் ஆற்றல் சிகிச்சை</a>
-    </h1>
-  
-
-      </header>
+  <a href="/2025/08/12/%E0%AE%86%E0%AE%B1%E0%AF%8D%E0%AE%B1%E0%AE%B2%E0%AF%8D-%E0%AE%9A%E0%AE%BF%E0%AE%95%E0%AE%BF%E0%AE%9A%E0%AF%8D%E0%AE%9A%E0%AF%88-%E0%AE%AE%E0%AF%81%E0%AE%B1%E0%AF%88/" class="article-title">
+    ஆற்றல் சிகிச்சை முறை
     
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <p>சோ கு ரெய் ரெய்கி சிகிச்சை மற்றும் தீப ஆராதனையில், பிரபஞ்சத்திலிருந்து சக்தியைப் பெறவும் உடலை குணப்படுத்தவும் கைகள் ஒரு வடிவத்தில் நகர்த்தப்படுகின்றன. இதை எங்கும் செய்யலாம் மற்றும் பரிந்துரைக்கப்பட்ட இடம் தேவையில்லை.</p>
-<p>அனைவருக்கும் ரெய்கி சிகிச்சைமுறை பற்றி தெரியாது, மேலும் ரெய்கி சிகிச்சைமுறை பற்றிய அறிவைப் பகிர்ந்து கொள்ள மாட்டார்கள், அங்குதான் கோயில்கள் குணப்படுத்தும் பங்கை வகிக்கின்றன.</p>
-<img src="/images/temple.jpg" class title="temple" alt="கோயில்கள் குணப்படுத்தும் பங்கை வகிக்கின்றன">
-
-
-<p>ஆனால் கோயில்களின் நோக்கம் என்ன?<br>அவை ஒரு பிரம்மாண்டமான முறையில் ஆற்றல் சிகிச்சையை வழங்குகின்றன.</p>
-<p>இந்த பிரம்மாண்டமான சிகிச்சையின் தேவை என்ன?<br>அதை கடைசியில் பார்ப்போம்.</p>
-<p>இப்போது கோயிலுக்குள் நமது சடங்குகளைக் கவனிப்போம். நாம் கைகளையும் கால்களையும் கழுவி கோயிலுக்குள் நுழைந்து, தீப ஆராதனையுடன் பிரார்த்தனை செய்து, பின்னர் கோயில் பிரகார வலம் செல்கிறோம்.</p>
-<p><img src="https://thumbs.dreamstime.com/b/madurai-india-february-indian-woman-colorful-sari-prays-inside-meenakshi-temple-february-meenakshi-temple-one-most-146141874.jpg" alt="தீப ஆராதனையுடன் பிரார்த்தனை"></p>
-<p><img src="https://images.boldsky.com/img/2023/06/whydohindusdopradakshina-1687783518.jpg" alt="பின்னர் கோயில் பிரகார வலம் செல்கிறோம்"><br>தீப ஆராதனை செய்யும் போது நமது கை இயக்க பாதை (ரெய்கி சிகிச்சையைப் போன்றது) ஒரு செப்பு சுருளைப் போல இருக்கும், இது பிரபஞ்சத்திலிருந்து ஆற்றலைக் கொண்டுவருகிறது. நமது கோயில் பிரகார வலம் பாதையைப் பாருங்கள். இது சோ கு ரெய் போன்ற அமைப்பைக் கொண்டிருக்கிறதா?</p>
-<p><img src="/images/frame14.png" alt="ஒற்றுமையைப் பார்க்க முடிகிறதா?"></p>
-<p>தீப ஆராதனையுடன், கோயிலைச் சுற்றி வருவதன் மூலம், கோயில்களில் சோ கு ரெய் சிகிச்சையை மேற்கொள்கிறோம்.</p>
-<p>தீப ஆராதனையுடன், சிலைகள் மற்றும் பிரபஞ்சத்திலிருந்து நமக்கு சக்தி கிடைக்கிறது, கோயில் நடைபாதையைச் சுற்றி வர வேண்டிய அவசியம் என்ன?</p>
-<p>கோயில்கள் கற்களைப் பயன்படுத்தி கட்டப்படுகின்றன, கிரானைட் கல்லில் உள்ள மேக்னடைட் மற்றும் ஹெமாடைட் குறைந்த அளவிலான காந்தப்புலங்களை உருவாக்குகின்றன. நாம் கோயில் நடைபாதையைச் சுற்றி நகரும்போது, நமது உடல் கோயிலின் காந்தப்புலங்களுடன் தொடர்பு கொள்கிறது, இதன் மூலம் நமது உடலையும் உயிர் சக்தியையும் பிரபஞ்ச ஆற்றலுடன் குணப்படுத்துகிறது.</p>
-<p><img src="/images/stone_temple.png" alt="கிரானைட் கல்லில் உள்ள மேக்னடைட் மற்றும் ஹெமாடைட் குறைந்த அளவிலான காந்தப்புலங்களை உருவாக்குகின்றன?"></p>
-<p>பூமியின் காந்த சக்தியை மலை உச்சியில் உணர முடியும் என்பதை நான் பகிர்ந்து கொண்டேன். அதனால்தான் முருகர் கோயில்கள் மலைகளில் அமைந்துள்ளன, செவ்வாய் தோஷத்திற்கான பரிகாரம் மலை உச்சியில் உள்ள முருகர் கோயில்களில் பிரார்த்தனை செய்வது.</p>
-<p>எல்லா இடங்களிலும் மலைகள் இல்லை, எனவே குணப்படுத்துதலை எவ்வாறு பெறுவது? அதனால்தான் கோயில்கள் மலை வடிவத்தை ஒத்ததாக கட்டப்பட்டன.</p>
-<p><img src="/images/mountain.png" alt="பிரமிடுகள் மற்றும் கோயில்கள் மலை வடிவத்தை ஒத்ததாக கட்டப்பட்டன"></p>
-<p>பிரமிடுகள் மற்றும் கோயில்கள் ஏன் சிறிய மலைகள் போல இருக்கின்றன என்பதை இப்போது நீங்கள் புரிந்துகொள்கிறீர்களா?</p>
-<p>ஆரம்பத்தில் உள்ள கேள்வி, இந்த பிரம்மாண்டமான கோவிலின் சிகிச்சையின் தேவை என்ன?</p>
-<p>பதில்:</p>
-<p>ஒரு நாட்டின் மக்கள் பல்வேறு நிலைகளில் பணியாற்றுவதால், இந்த சுய பாதுகாப்பு ரெய்கி சிகிச்சையைச் செய்ய அனைத்து மக்களும் அறிவு, நேரம் மற்றும் அட்டவணையை வைத்திருக்க முடியாது, எனவே மக்கள் ஆற்றலையும் நல்வாழ்வையும் இழப்பார்கள். தங்கள் மக்களின் நல்வாழ்வுக்காக <strong>தமிழ் மன்னர்கள், மக்களின் உயிர் சக்தியை குணப்படுத்த பல கோயில்களைக் கட்டினார்கள், இதன் மூலம் அவர்களின் ஆரோக்கியம் மற்றும் நல்வாழ்வுக்காக ஆதரித்தனர்</strong>.</p>
-<p><img src="https://vedified.in/wp-content/uploads/2022/06/chola.jpeg" alt="தமிழ் மன்னர்கள், மக்களின் உயிர் சக்தியை குணப்படுத்த பல கோயில்களைக் கட்டினார்கள்"></p>
-<p>தமிழ் மன்னர்கள் ஏன் இவ்வளவு கோயில்களைக் கட்டினார்கள் என்பது இப்போது உங்களுக்குப் புரிகிறதா?</p>
-<p><img src="/images/rajarajachozhan.jpg" alt="தமிழ் மன்னர்கள், மக்களின் உயிர் சக்தியை குணப்படுத்த பல கோயில்களைக் கட்டினார்கள்"></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://thegti.xyz/2025/08/10/%E0%AE%95%E0%AF%87%E0%AE%BE%E0%AE%B5%E0%AE%BF%E0%AE%B2%E0%AF%8D%E0%AE%95%E0%AE%B3%E0%AE%BF%E0%AE%B2%E0%AF%8D-%E0%AE%86%E0%AE%B1%E0%AF%8D%E0%AE%B1%E0%AE%B2%E0%AF%8D-%E0%AE%9A%E0%AE%BF%E0%AE%95%E0%AE%BF%E0%AE%9A%E0%AF%8D%E0%AE%9A%E0%AF%88/" data-id="cmnewgimn000r8r28hwxd1f65" data-title="கோவில்களில் ஆற்றல் சிகிச்சை" class="article-share-link"><span class="fa fa-share">Share</span></a>
-      
-      
-      
-    </footer>
-  </div>
+  </a>
   
+  
+    <p class="article-excerpt">ஆற்றல் சார்ந்த சிகிச்சைகள் வேலை செய்கிறதா?
+எக்ஸ்ரே கதிர்வீச்சு சிகிச்சைபுரோட்டான் கதிர்வீச்சு சிகிச்சைநியூட்ரான் கதிர்வீச்சு சிகிச்சைகார்பன் அயன் கதிர்வீச்சு சிகிச்சைலேசர் அறுவை சிகிச்சைஃபோட்டோடைனமிக…</p>
+  
+  <a href="/2025/08/12/%E0%AE%86%E0%AE%B1%E0%AF%8D%E0%AE%B1%E0%AE%B2%E0%AF%8D-%E0%AE%9A%E0%AE%BF%E0%AE%95%E0%AE%BF%E0%AE%9A%E0%AF%8D%E0%AE%9A%E0%AF%88-%E0%AE%AE%E0%AF%81%E0%AE%B1%E0%AF%88/" class="read-more">Continue reading →</a>
 </article>
 
-
-
-  
-    <article id="post-உடல்-மேல்-உயிர்-வந்து-ஒன்றுவது-இயல்பே" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+    
+      <article class="article-card">
   <div class="article-meta">
-    <a href="/2025/08/08/%E0%AE%89%E0%AE%9F%E0%AE%B2%E0%AF%8D-%E0%AE%AE%E0%AF%87%E0%AE%B2%E0%AF%8D-%E0%AE%89%E0%AE%AF%E0%AE%BF%E0%AE%B0%E0%AF%8D-%E0%AE%B5%E0%AE%A8%E0%AF%8D%E0%AE%A4%E0%AF%81-%E0%AE%92%E0%AE%A9%E0%AF%8D%E0%AE%B1%E0%AF%81%E0%AE%B5%E0%AE%A4%E0%AF%81-%E0%AE%87%E0%AE%AF%E0%AE%B2%E0%AF%8D%E0%AE%AA%E0%AF%87/" class="article-date">
-  <time class="dt-published" datetime="2025-08-08T10:12:08.000Z" itemprop="datePublished">08-08-2025</time>
-</a>
+    <span class="article-date">10 · 08 · 2025</span>
     
   </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
   
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/2025/08/08/%E0%AE%89%E0%AE%9F%E0%AE%B2%E0%AF%8D-%E0%AE%AE%E0%AF%87%E0%AE%B2%E0%AF%8D-%E0%AE%89%E0%AE%AF%E0%AE%BF%E0%AE%B0%E0%AF%8D-%E0%AE%B5%E0%AE%A8%E0%AF%8D%E0%AE%A4%E0%AF%81-%E0%AE%92%E0%AE%A9%E0%AF%8D%E0%AE%B1%E0%AF%81%E0%AE%B5%E0%AE%A4%E0%AF%81-%E0%AE%87%E0%AE%AF%E0%AE%B2%E0%AF%8D%E0%AE%AA%E0%AF%87/">உடல் மேல் உயிர் வந்து ஒன்றுவது இயல்பே!</a>
-    </h1>
-  
-
-      </header>
+  <a href="/2025/08/10/%E0%AE%95%E0%AF%87%E0%AE%BE%E0%AE%B5%E0%AE%BF%E0%AE%B2%E0%AF%8D%E0%AE%95%E0%AE%B3%E0%AE%BF%E0%AE%B2%E0%AF%8D-%E0%AE%86%E0%AE%B1%E0%AF%8D%E0%AE%B1%E0%AE%B2%E0%AF%8D-%E0%AE%9A%E0%AE%BF%E0%AE%95%E0%AE%BF%E0%AE%9A%E0%AF%8D%E0%AE%9A%E0%AF%88/" class="article-title">
+    கோவில்களில் ஆற்றல் சிகிச்சை
     
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <br>
-<br>
-
-<h3 id="நமக்கான-உயிர்-சக்தி-எங்கிருந்து-கிடைக்கிறது"><a href="#நமக்கான-உயிர்-சக்தி-எங்கிருந்து-கிடைக்கிறது" class="headerlink" title="நமக்கான உயிர் சக்தி எங்கிருந்து கிடைக்கிறது?"></a>நமக்கான உயிர் சக்தி எங்கிருந்து கிடைக்கிறது?</h3><p>எல்லா உயிரினங்களுக்கும் உயிர் சக்தி பிரபஞ்சத்திலிருந்து வருகிறது. பிரபஞ்சத்தில் உயிர் சக்தியின் ஆதாரம் என்னவென்று நமக்குத் தெரியாது. அது பூமியின் காந்தப்புலத்திலிருந்து வருகிறதா அல்லது சூரியன், சந்திரன், வியாழன் அல்லது பிரபஞ்சத்தின் எந்த உறுப்பு உயிர் சக்தியின் அடிப்படையை உருவாக்குகிறது என்பது தெரியவில்லை. அனைத்து உயிரினங்களும் மேற்கூறிய கூறுகளும் பிரபஞ்சத்தில் அடங்கியிருப்பதால், உயிர் சக்தி பிரபஞ்சத்திற்குள் பகிரப்படுகிறது அல்லது வழங்கப்படுகிறது அல்லது வலுக்கட்டாயமாக உருவாக்கப்படுகிறது என்று நாம் முடிவு செய்யலாம்.</p>
-<p>நமது முன்னோர்கள் இந்த உயிர் சக்தி சக்தியைப் பயன்படுத்துவதற்கான வழிகளைக் கண்டுபிடித்திருக்கலாம், அது நம்மை தீப ஆராதனைக்கு இட்டுச் செல்கிறது. 1860 க்குப் பிறகு இது ஜப்பானில் ரெய்கியாகவும் சீனாவில் லிங்க்ச்சியாகவும் உருவாகிறது.</p>
-<br>
-
-<hr>
-<br>
-
-<p><strong>நவீன அறிவியலில் ச்சி காயில் (இண்டக்க்ஷன் காயில்) அதன் சமமான  சோ கு ரெய் (ரெய்கி)</strong></p>
-<img src="/images/qi_chokurei.png" class title="induction coil" alt="இண்டக்க்ஷன் காயில் மற்றும் சோ கு ரெய் கை  வாட்டம்">
-
-<br>
-
-<h3 id="இண்டக்ஷனின்-காயில்-எப்படி-வேலை-செய்கிறது"><a href="#இண்டக்ஷனின்-காயில்-எப்படி-வேலை-செய்கிறது" class="headerlink" title="இண்டக்ஷனின் காயில் எப்படி வேலை செய்கிறது?"></a>இண்டக்ஷனின் காயில் எப்படி வேலை செய்கிறது?</h3><img src="/images/electromagnetic-induction.jpg" class title="induction coil" alt="இண்டக்க்ஷன் காயில் எப்படி வேலை செய்கிறது">
-
-<p>முதன்மை காயில் (Transmitter Coil): இது சார்ஜிங் பேட் அல்லது சார்ஜர் உள்ளே இருக்கும். இதில் மாற்று மின்சாரம் (AC) பாய்ந்து ஒரு மாறும் காந்தப்புலத்தை உருவாக்குகிறது(Faraday’s Law). இந்த காந்தப்புலம் சார்ஜிங் பேட் மற்றும் சாதனத்திற்கு இடையே உள்ள குறுகிய இடைவெளியைக் கடந்து, இரண்டாம் நிலை காயிலை அடைகிறது.</p>
-<p>இரண்டாம் நிலை காயில் (Receiver Coil): இது சார்ஜ் செய்யப்படும் சாதனத்தில் (எ.கா., ஸ்மார்ட்ஃபோன்) இருக்கும். இது முதன்மை காயிலால் உருவாக்கப்பட்ட காந்தப்புலத்தைப் பெற்று மின்சாரத்தை தூண்டுகிறது. இரண்டாம் நிலை காயிலில் மாறும் காந்தப்புலம் மின்சாரத்தை தூண்டுகிறது. இந்த மின்சாரம் மாற்றி (rectified) DC ஆக மாற்றப்பட்டு, சாதனத்தின் பேட்டரியை சார்ஜ் செய்ய பயன்படுகிறது.</p>
-<img src="/images/wireless_charge.png" class title="phone wireless charging" alt="சுருள்களைப் பயன்படுத்தி சார்ஜரிலிருந்து தொலைபேசிக்கு மின் ஆற்றல் கடத்தப்படுகிறது.">
-
-
-<p><strong>ஆற்றலை (இந்த விஷயத்தில் மின்சார மூலத்திலிருந்து வரும் மின் ஆற்றல்) ஒரு ஊடகம் (செப்பு சுருள்) மூலம் ஒரு பொருளுக்கு கடத்த முடியும். அதேபோல், சோ கு ரெய் (கையை ஊடகமாகப் பயன்படுத்தி உருவாக்கப்பட்ட ஒரு சுருள்) மூலம் பிரபஞ்சத்திலிருந்து மனித உடலுக்கு ஆற்றல் கடத்தப்படுகிறது.</strong></p>
-<img src="/images/chokurei_human.png" class title="cho ku rei" alt="சோ கு ரெய் மூலம்  பிரபஞ்சத்திலிருந்து மனித உடலுக்கு ஆற்றல் கடத்தப்படுகிறது">
-
-
-<h2 id="உடல்-மேல்-உயிர்-வந்து-ஒன்றுவது-இயல்பே"><a href="#உடல்-மேல்-உயிர்-வந்து-ஒன்றுவது-இயல்பே" class="headerlink" title="உடல் மேல் உயிர் வந்து ஒன்றுவது இயல்பே!"></a>உடல் மேல் உயிர் வந்து ஒன்றுவது இயல்பே!</h2><p> விளக்கங்கள் கண்டு நாம் தீப ஆராதனை செய்யும் காரணம் முழுமையாக புரிந்துவிட்டதா?</p>
-<p><img src="/images/oar2.jpg"></p>
-<hr>
-<p>நாம் ஏன் தீப ஆராதனை செய்கிறோம் என்று புரிந்துகொண்டீர்களா?</p>
-<p>இந்த ஆற்றல் சிகிச்சை முறையை வேறு எப்படியெல்லாம் நாம் கோவில்களில் பின்பற்றுகிறோம் என்று நாளை பார்க்கலாம்.</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://thegti.xyz/2025/08/08/%E0%AE%89%E0%AE%9F%E0%AE%B2%E0%AF%8D-%E0%AE%AE%E0%AF%87%E0%AE%B2%E0%AF%8D-%E0%AE%89%E0%AE%AF%E0%AE%BF%E0%AE%B0%E0%AF%8D-%E0%AE%B5%E0%AE%A8%E0%AF%8D%E0%AE%A4%E0%AF%81-%E0%AE%92%E0%AE%A9%E0%AF%8D%E0%AE%B1%E0%AF%81%E0%AE%B5%E0%AE%A4%E0%AF%81-%E0%AE%87%E0%AE%AF%E0%AE%B2%E0%AF%8D%E0%AE%AA%E0%AF%87/" data-id="cmnewgiml000g8r28bqruhcmr" data-title="உடல் மேல் உயிர் வந்து ஒன்றுவது இயல்பே!" class="article-share-link"><span class="fa fa-share">Share</span></a>
-      
-      
-      
-    </footer>
-  </div>
+  </a>
   
+  
+    <p class="article-excerpt">சோ கு ரெய் ரெய்கி சிகிச்சை மற்றும் தீப ஆராதனையில், பிரபஞ்சத்திலிருந்து சக்தியைப் பெறவும் உடலை குணப்படுத்தவும் கைகள் ஒரு வடிவத்தில் நகர்த்தப்படுகின்றன. இதை எங்கும் செய்யலாம் மற்றும் பரிந்துரைக்கப்பட்ட…</p>
+  
+  <a href="/2025/08/10/%E0%AE%95%E0%AF%87%E0%AE%BE%E0%AE%B5%E0%AE%BF%E0%AE%B2%E0%AF%8D%E0%AE%95%E0%AE%B3%E0%AE%BF%E0%AE%B2%E0%AF%8D-%E0%AE%86%E0%AE%B1%E0%AF%8D%E0%AE%B1%E0%AE%B2%E0%AF%8D-%E0%AE%9A%E0%AE%BF%E0%AE%95%E0%AE%BF%E0%AE%9A%E0%AF%8D%E0%AE%9A%E0%AF%88/" class="read-more">Continue reading →</a>
 </article>
 
-
-
-  
-    <article id="post-தீப-ஆராதனை-எப்படி" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+    
+      <article class="article-card">
   <div class="article-meta">
-    <a href="/2025/08/07/%E0%AE%A4%E0%AF%80%E0%AE%AA-%E0%AE%86%E0%AE%B0%E0%AE%BE%E0%AE%A4%E0%AE%A9%E0%AF%88-%E0%AE%8E%E0%AE%AA%E0%AF%8D%E0%AE%AA%E0%AE%9F%E0%AE%BF/" class="article-date">
-  <time class="dt-published" datetime="2025-08-07T07:02:09.000Z" itemprop="datePublished">07-08-2025</time>
-</a>
+    <span class="article-date">08 · 08 · 2025</span>
     
   </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
   
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/2025/08/07/%E0%AE%A4%E0%AF%80%E0%AE%AA-%E0%AE%86%E0%AE%B0%E0%AE%BE%E0%AE%A4%E0%AE%A9%E0%AF%88-%E0%AE%8E%E0%AE%AA%E0%AF%8D%E0%AE%AA%E0%AE%9F%E0%AE%BF/">தீப ஆராதனை வழிமுறை</a>
-    </h1>
-  
-
-      </header>
+  <a href="/2025/08/08/%E0%AE%89%E0%AE%9F%E0%AE%B2%E0%AF%8D-%E0%AE%AE%E0%AF%87%E0%AE%B2%E0%AF%8D-%E0%AE%89%E0%AE%AF%E0%AE%BF%E0%AE%B0%E0%AF%8D-%E0%AE%B5%E0%AE%A8%E0%AF%8D%E0%AE%A4%E0%AF%81-%E0%AE%92%E0%AE%A9%E0%AF%8D%E0%AE%B1%E0%AF%81%E0%AE%B5%E0%AE%A4%E0%AF%81-%E0%AE%87%E0%AE%AF%E0%AE%B2%E0%AF%8D%E0%AE%AA%E0%AF%87/" class="article-title">
+    உடல் மேல் உயிர் வந்து ஒன்றுவது இயல்பே!
     
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <br>
-<br>
-<br>
-<div class="video-container"><iframe src="https://www.youtube.com/embed/_ygbGTGllj8" frameborder="0" loading="lazy" allowfullscreen></iframe></div>
-<br>
-
-<p> தீப ஆராதனை காட்டும் போது, முதலில் மேலிருந்து கீழே தீபத்தை இறக்குவோம். பிறகு கடிகார சுழற்சியை போல மூன்று முறை தீபத்தை தெய்வத்தின் சிலையோ அல்லது படத்தையோ முன்னால் சுழற்றியும், எதிர் திசையிலும் சுழற்றியும் அந்த தீபத்தை தொட்டு வணங்குவோம்.  </p>
-<h3 id="ஆராதனை-கை-வாட்டம்"><a href="#ஆராதனை-கை-வாட்டம்" class="headerlink" title="ஆராதனை கை  வாட்டம்"></a>ஆராதனை கை  வாட்டம்</h3><p>   நாம் தீப ஆராதனை செய்யும் போது, கை போகும் வாட்டத்தை ஒரு எழுதுகோலால் வரைந்தால் இப்படி இருக்கும்.    </p>
-  <img src="/images/choku.jpg" class width="300" height="200">
-
-<p>  இந்த கை வாட்டத்தின்  பெயர் “ச்சோகுரேய்”, இது ரெய்கி(Reiki) சிகிச்சையின் ஒரு அங்கமாகும். ரெய்கி சிகிச்சை என்பது உயிர் ஆற்றலை சீராக்கும் சிகிச்சையாகும். இந்த சிகிச்சை முறையை ஜப்பானில் ரெய்கி என்றும் சைனாவில்  லிங்சீ என்றும் அழைப்பர்.</p>
-<p>  ஒவ்வொரு நாளும் நமது அன்றாட பணிகளாலும், பல்வேறு சுமைகளாலும் நமது உயிர் ஆற்றல் குறைந்து வலிமை இழக்கிறோம். அதற்கான உயிர் ஆற்றல் சிகிச்சை முறை தான் இந்த ரெய்கி. உலகெங்கிலும் இந்த சிகிச்சை முறை ஏற்றுக்கொள்ளப்பட்டுள்ளது.</p>
-<p>  ரெய்கி சிகிச்சை முறையில் இந்த கை வாட்டங்கள் உடலில் உயிர் ஆற்றலை சீர் செய்கிறது, அதே போல் நமது கோவில்களிலும், குல தெய்வ சிலைகளுக்கு தீப ஆராதனை செய்யும்போது நமது உயிர் ஆற்றல் சீர் செய்யப்படுகிறது. </p>
-<h2 id="இது-தான்-நாம்-தீப-ஆராதனை-செய்யும்-காரணம்"><a href="#இது-தான்-நாம்-தீப-ஆராதனை-செய்யும்-காரணம்" class="headerlink" title="இது தான் நாம் தீப ஆராதனை செய்யும் காரணம்!"></a>இது தான் நாம் தீப ஆராதனை செய்யும் காரணம்!</h2><br>
-
-<hr>
-<h3 id="திரு-மிகாஓ-உசூயி"><a href="#திரு-மிகாஓ-உசூயி" class="headerlink" title="திரு.மிகாஓ உசூயி"></a>திரு.மிகாஓ உசூயி</h3><p>  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b5/Mikaousui.jpg/375px-Mikaousui.jpg"></p>
-<p>  ஜப்பானில் இந்த சிகிச்சை முறையை திரு.மிகாஓ உசூயி தொடங்கினார். இவர் 1865ல் பிறந்தார் சமுராய் வம்சாவழியில்  பிறந்த இவர் அந்த பராம்பரியத்திலேயே வளர்க்கப்பட்டார்.</p>
-<p>  கி.பி 1860களுக்கு பிறகு தான் இந்த முறை உருவாக்கப்பட்டது. ஆனால் <strong>நம் முன்னோர்கள் ஆயிரம் ஆயிரம் ஆண்டுகளாக இந்த முறையை நமக்கு கடத்தி, பழக்கப்படுத்தி, கற்பித்து நமக்கு பேருதவி</strong> செய்துள்ளனர். </p>
-<hr>
-<p>இந்த உயிர் ஆற்றல் சிகிச்சைமுறை வேலை செய்யுமா? செய்யும்!</p>
-<p>ஆதாரத்தை  நாளை பார்ப்போம்.</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://thegti.xyz/2025/08/07/%E0%AE%A4%E0%AF%80%E0%AE%AA-%E0%AE%86%E0%AE%B0%E0%AE%BE%E0%AE%A4%E0%AE%A9%E0%AF%88-%E0%AE%8E%E0%AE%AA%E0%AF%8D%E0%AE%AA%E0%AE%9F%E0%AE%BF/" data-id="cmnewgimo00108r2868hq0xlf" data-title="தீப ஆராதனை வழிமுறை" class="article-share-link"><span class="fa fa-share">Share</span></a>
-      
-      
-      
-    </footer>
-  </div>
+  </a>
   
+  
+    <p class="article-excerpt">
+
+
+நமக்கான உயிர் சக்தி எங்கிருந்து கிடைக்கிறது?எல்லா உயிரினங்களுக்கும் உயிர் சக்தி பிரபஞ்சத்திலிருந்து வருகிறது. பிரபஞ்சத்தில் உயிர் சக்தியின் ஆதாரம் என்னவென்று நமக்குத் தெரியாது. அது பூமியின் காந்தப…</p>
+  
+  <a href="/2025/08/08/%E0%AE%89%E0%AE%9F%E0%AE%B2%E0%AF%8D-%E0%AE%AE%E0%AF%87%E0%AE%B2%E0%AF%8D-%E0%AE%89%E0%AE%AF%E0%AE%BF%E0%AE%B0%E0%AF%8D-%E0%AE%B5%E0%AE%A8%E0%AF%8D%E0%AE%A4%E0%AF%81-%E0%AE%92%E0%AE%A9%E0%AF%8D%E0%AE%B1%E0%AF%81%E0%AE%B5%E0%AE%A4%E0%AF%81-%E0%AE%87%E0%AE%AF%E0%AE%B2%E0%AF%8D%E0%AE%AA%E0%AF%87/" class="read-more">Continue reading →</a>
 </article>
 
-
-
-  
-
-
-  <nav id="page-nav">
     
-    <a class="extend prev" rel="prev" href="/page/13/">&laquo; Prev</a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/12/">12</a><a class="page-number" href="/page/13/">13</a><span class="page-number current">14</span><a class="page-number" href="/page/15/">15</a><a class="extend next" rel="next" href="/page/15/">Next &raquo;</a>
-  </nav>
 
-</section>
-        
-      </div>
-      <footer id="footer">
-  
-  <div class="outer">
-    <div id="footer-info" class="inner">
+    
       
-      &copy; 2026 R Stalin<br>
-      Powered by <a href="https://thegti.xyz" target="_blank">The GTI</a>
+      <nav class="pagination">
+        
+          <a href="/page/13/" class="page-btn">← Prev</a>
+        
+        
+          <a href="/" class="page-btn">01</a>
+          <span class="page-btn page-ellipsis">…</span>
+        
+        
+          <a href="/page/11"
+             class="page-btn">
+            11
+          </a>
+        
+          <a href="/page/12"
+             class="page-btn">
+            12
+          </a>
+        
+          <a href="/page/13"
+             class="page-btn">
+            13
+          </a>
+        
+          <a href="/page/14"
+             class="page-btn active">
+            14
+          </a>
+        
+          <a href="/page/15"
+             class="page-btn">
+            15
+          </a>
+        
+        
+        
+          <a href="/page/15/" class="page-btn">Next →</a>
+        
+      </nav>
+    
+  </main>
+
+  <aside class="sidebar">
+  <div class="sidebar-section">
+    <div class="sidebar-heading">Topics</div>
+    <div class="tag-cloud">
+      
+        <a href="/tags/666/" class="tag-pill">666</a>
+      
     </div>
   </div>
+  <div class="sidebar-section">
+    <div class="sidebar-heading">Archive</div>
+    <ul class="archive-list">
+      
+        <li class="archive-item">
+          <a href="/2026/04/01/The-Second-House/">இரண்டாம் வீடு(PAAVAM) - Second House</a>
+          <span class="archive-count">04/26</span>
+        </li>
+      
+        <li class="archive-item">
+          <a href="/2026/03/31/Fear-it/">கவலை வேண்டாமா?</a>
+          <span class="archive-count">03/26</span>
+        </li>
+      
+        <li class="archive-item">
+          <a href="/2026/03/30/The-Devil-s-Image/">பிசாசின் உருவம் The Devil&#39;s Image</a>
+          <span class="archive-count">03/26</span>
+        </li>
+      
+        <li class="archive-item">
+          <a href="/2026/03/29/All-rounder-666/">ஜெயலலிதா எனும் நான் ஒரு 666</a>
+          <span class="archive-count">03/26</span>
+        </li>
+      
+        <li class="archive-item">
+          <a href="/2026/03/28/Check-123-Check/">Check 123 Check</a>
+          <span class="archive-count">03/26</span>
+        </li>
+      
+    </ul>
+  </div>
+  <div class="sidebar-section">
+    <div class="sidebar-heading">About</div>
+    <p style="font-size:14px;color:var(--text-muted);line-height:1.7;font-weight:300">Written by R. Stalin. Exploring connections between ancient esoteric traditions and modern history.</p>
+  </div>
+</aside>
+
+</div>
+
+  </div>
+  <footer class="site-footer">
+  <span class="footer-text">© 2026 <span>R Stalin</span> · The GTI</span>
 </footer>
 
-<script>
-  function toggleText() {
-    const text = document.getElementById("hiddenText");
-    text.style.display = (text.style.display === "none") ? "block" : "none";
-  }
-</script>
-
+  <!-- Quick Action Button -->
+  <div class="qab notranslate">
+    <button class="qab-btn" aria-label="Quick actions" aria-expanded="false">···</button>
+    <div class="qab-panel">
+      <button id="theme-toggle" class="theme-toggle qab-action" aria-label="Toggle theme">☾ Dark</button>
+      <select id="lang-select" class="lang-select qab-action" aria-label="Language">
+        <option value="en">EN</option>
+        <option value="ta">தமிழ்</option>
+        <option value="hi">हिन्दी</option>
+        <option value="kn">ಕನ್ನಡ</option>
+        <option value="ml">മലയാളം</option>
+        <option value="te">తెలుగు</option>
+        <option value="zh-CN">中文</option>
+        <option value="es">Español</option>
+        <option value="fr">Français</option>
+        <option value="de">Deutsch</option>
+        <option value="ru">Русский</option>
+        <option value="ar">العربية</option>
+        <option value="ja">日本語</option>
+      </select>
+      <div class="qab-divider"></div>
+      <button class="qab-scroll qab-action" data-scroll="top" aria-label="Scroll to top">↑ Top</button>
+      <button class="qab-scroll qab-action" data-scroll="mid" aria-label="Scroll to middle">↕ Mid</button>
+      <button class="qab-scroll qab-action" data-scroll="bottom" aria-label="Scroll to bottom">↓ Bottom</button>
     </div>
-    <nav id="mobile-nav">
-  
-    <a href="/" class="mobile-nav-link">Home</a>
-  
-    <a href="/archives" class="mobile-nav-link">Archives</a>
-  
-</nav>
-    
-
-
-<script src="/js/jquery-3.6.4.min.js"></script>
-
-
-
-  
-<script src="/fancybox/jquery.fancybox.min.js"></script>
-
-
-
-
-<script src="/js/script.js"></script>
-
-
-
-
-
   </div>
+
+  <script src="/js/theme.js"></script>
+  <script src="/js/i18n.js"></script>
+  <script src="/js/lottie-intro.js"></script>
 </body>
 </html>

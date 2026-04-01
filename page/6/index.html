@@ -1,351 +1,270 @@
 <!DOCTYPE html>
-<html>
+<html lang="en" data-theme="dark">
 <head>
-  <meta charset="utf-8">
-  <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-0KVQ5PMHNQ"></script>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The GTI</title>
+<meta name="description" content="Posts on general technical data and analytics">
+<link rel="stylesheet" href="/css/main.css">
 <script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-0KVQ5PMHNQ');
+  // Prevent flash of wrong theme
+  (function(){
+    var t = localStorage.getItem('gti-theme') ||
+      (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+    document.documentElement.setAttribute('data-theme', t);
+  })();
 </script>
-  
-  <title>The GTI</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="Posts on general technical data and analytics">
-<meta property="og:type" content="website">
-<meta property="og:title" content="The GTI">
-<meta property="og:url" content="https://thegti.xyz/page/6/index.html">
-<meta property="og:site_name" content="The GTI">
-<meta property="og:description" content="Posts on general technical data and analytics">
-<meta property="og:locale" content="en_US">
-<meta property="article:author" content="R Stalin">
-<meta name="twitter:card" content="summary">
-  
-    <link rel="alternate" href="/atom.xml" title="The GTI" type="application/atom+xml">
-  
-  
-    <link rel="shortcut icon" href="/favicon.png">
-  
-  
-  
-<link rel="stylesheet" href="/css/style.css">
+<div id="google_translate_element" style="display:none"></div>
+<script>
+  function googleTranslateElementInit() {
+    new google.translate.TranslateElement({
+      pageLanguage: 'ta',
+      includedLanguages: 'en,ta,hi,kn,ml,te,zh-CN,es,fr,de,ru,ar,ja',
+      autoDisplay: false
+    }, 'google_translate_element');
+  }
+</script>
+<script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit" async></script>
 
-  
-    
-<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
-
-  
-  
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fork-awesome@1.2.0/css/fork-awesome.min.css">
-
-<!-- hexo injector head_end start --><script defer src="https://umami-production-af63.up.railway.app/script.js" data-website-id="c10692f6-309a-4c2f-a3d4-3b66ac48eb5f"></script><!-- hexo injector head_end end --><meta name="generator" content="Hexo 7.3.0"></head>
-
+  <script type="module" src="https://unpkg.com/@dotlottie/player-component@2.7.12/dist/dotlottie-player.mjs"></script>
+<meta name="generator" content="Hexo 7.3.0"></head>
 <body>
-  <div id="container">
-    <div id="wrap">
-      <header id="header">
-  <div id="banner"></div>
-  <div id="header-outer" class="outer">
-    <div id="header-title" class="inner">
-      <h1 id="logo-wrap">
-        <a href="/" id="logo"></a>
-      </h1>
-      
-        <h2 id="subtitle-wrap">
-          <a href="/" id="subtitle"></a>
-        </h2>
-      
-    </div>
-    <div id="header-inner" class="inner">
-      <nav id="main-nav">
-        <a id="main-nav-toggle" class="nav-icon"><span class="fa fa-bars"></span></a>
-        
-          <a class="main-nav-link" href="/">Home</a>
-        
-          <a class="main-nav-link" href="/archives">Archives</a>
-        
-      </nav>
-      <nav id="sub-nav">
-        
-        
-          <a class="nav-icon" href="/atom.xml" title="RSS Feed"><span class="fa fa-rss"></span></a>
-        
-        <a class="nav-icon nav-search-btn" title="Search"><span class="fa fa-search"></span></a>
-      </nav>
-      <div id="search-form-wrap">
-        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://thegti.xyz"></form>
-      </div>
-    </div>
+  <!-- Lottie intro overlay — shown only on first visit -->
+  <div id="lottie-intro-overlay" style="display:none">
+    <dotlottie-player
+      id="lottie-welcome"
+      src="/lottie-welcome.lottie"
+      autoplay
+      loop="false"
+      speed="1"
+    ></dotlottie-player>
+    <dotlottie-player
+      id="lottie-player"
+      src="/lottie-intro.lottie"
+      autoplay
+      loop
+      speed="1"
+    ></dotlottie-player>
+    <button id="lottie-continue-btn">Continue to thegti.xyz ›</button>
+  </div>
+
+  <div id="reading-progress"></div>
+  <header class="site-header">
+  <div class="banner-container">
+    <img src="/images/hero-banner-dark.png" alt="The GTI" class="header-banner banner-dark">
+    <img src="/images/hero-banner-light.png" alt="The GTI" class="header-banner banner-light">
+  </div>
+  <div class="site-top-row">
+    <nav class="site-nav notranslate">
+      <ul class="nav-links">
+        <li><a href="/">Home</a></li>
+        <li><a href="/archives">Archives</a></li>
+        <li><a href="/about">About</a></li>
+      </ul>
+    </nav>
   </div>
 </header>
 
-      <div class="outer">
-        <section id="main">
-  
-    <article id="post-மலைகள்" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="site-wrapper">
+    <div class="site-main">
+  <main class="post-feed">
+    
+      <article class="article-card">
   <div class="article-meta">
-    <a href="/2025/09/16/%E0%AE%AE%E0%AE%B2%E0%AF%88%E0%AE%95%E0%AE%B3%E0%AF%8D/" class="article-date">
-  <time class="dt-published" datetime="2025-09-15T21:36:43.000Z" itemprop="datePublished">16-09-2025</time>
-</a>
+    <span class="article-date">17 · 09 · 2025</span>
     
   </div>
-  <div class="article-inner">
+  
+  <a href="/2025/09/17/%E0%AE%9A%E0%AE%BF%E0%AE%B5%E0%AE%A9%E0%AF%81%E0%AE%AE%E0%AF%8D-%E0%AE%9A%E0%AE%95%E0%AF%8D%E0%AE%A4%E0%AE%BF%E0%AE%AF%E0%AF%81%E0%AE%AE%E0%AF%8D-%E0%AE%9A%E0%AF%87%E0%AE%B0%E0%AF%8D%E0%AE%A8%E0%AF%8D%E0%AE%A4-%E0%AE%AE%E0%AE%BE%E0%AE%9A%E0%AF%81%E0%AE%9F%E0%AE%BE/" class="article-title">
     
     
-      <header class="article-header">
-        
+  </a>
   
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/2025/09/16/%E0%AE%AE%E0%AE%B2%E0%AF%88%E0%AE%95%E0%AE%B3%E0%AF%8D/">நீரும் நெருப்பும் 🚫 _____ நீரும் மலையும் ✅</a>
-    </h1>
   
+    <p class="article-excerpt">சிவனும்🔺  சக்தியும்🔻சேர்ந்தா மாசுடா !
 
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <br>
-<br>
 
-<h3 id="ஆணில்-இருந்து-பெண்-படைக்கப்பட்டாள்"><a href="#ஆணில்-இருந்து-பெண்-படைக்கப்பட்டாள்" class="headerlink" title="ஆணில் இருந்து பெண் படைக்கப்பட்டாள்"></a>ஆணில் இருந்து பெண் படைக்கப்பட்டாள்</h3><p>ஆதியாகமம் (Genesis): அதிகாரம் 2: </p>
-<p>வசனம் 21. அப்பொழுது தேவனாகிய கர்த்தர் ஆதாமுக்கு அயர்ந்த நித்திரையை வரப்பண்ணினார், அவன் நித்திரையடைந்தான்; அவர் அவன் விலா எலும்புகளில் ஒன்றை எடுத்து, அந்த இடத்தைச் சதையினால் அடைத்தார்.</p>
-<p>வசனம் 22. தேவனாகிய கர்த்தர் தாம் மனுஷனில் எடுத்த விலா எலும்பை மனுஷியாக உருவாக்கி, அவளை மனுஷனிடத்தில் கொண்டுவந்தார்.</p>
-<p>வசனம் 23. அப்பொழுது ஆதாம்: இவள் என் எலும்பில் எலும்பும், என் மாம்சத்தில் மாம்சமுமாய் இருக்கிறாள்; இவள் மனுஷனில் எடுக்கப்பட்டபடியினால் மனுஷி என்னப்படுவாள் என்றான்.</p>
-<img src="https://wellspringchristianministries.org/wp-content/uploads/2017/08/genesis-2-21-22.jpg" class width="600" height="600" title="ஆதியாகமம்" alt="ஆதியாகமம்">
 
-<h3 id="Men-are-from-Mars-Women-are-from-Venus"><a href="#Men-are-from-Mars-Women-are-from-Venus" class="headerlink" title="Men are from Mars, Women are from Venus"></a>Men are from Mars, Women are from Venus</h3><p>ஆண்கள் செவ்வாய் கிரகத்தின் குணங்களான தர்க்கரீதியான சிந்தனை, சுதந்திரம், பிரச்சினைகளைத் தீர்ப்பது போன்ற கொண்டவர்கள்.</p>
-<p>பெண்கள் சுக்கிர கிரகத்தின் உணர்ச்சிவயப்படுத்தல், பேணிக் காத்தல், உறவு சார்ந்த சிந்தனை கொண்டவர்கள்.</p>
-<p>செவ்வாய் - கல், மலைப்பாங்கான பகுதிகள்</p>
-<p>சுக்கிரன் - நீர், பாயும் தன்மை</p>
-<h3 id="ஆம்-பெண்தன்மை-ஆண்தன்மையில்-இருந்து-தான்-உருவானது"><a href="#ஆம்-பெண்தன்மை-ஆண்தன்மையில்-இருந்து-தான்-உருவானது" class="headerlink" title="ஆம் பெண்தன்மை ஆண்தன்மையில் இருந்து தான் உருவானது"></a>ஆம் பெண்தன்மை ஆண்தன்மையில் இருந்து தான் உருவானது</h3><p><strong>தலை காவேரி - காவேரி நதி நீர் உருவாகும் இடம்</strong></p>
-<div class="video-container"><iframe src="https://www.youtube.com/embed/6j0ZWqIpR7Y" frameborder="0" loading="lazy" allowfullscreen></iframe></div>
 
-<br>
-
-<p><strong>பெண் தன்மை கொண்ட நீர், ஆண் தன்மை கொண்ட  மலையில் இருந்து வருகிறது</strong></p>
-<div class="video-container"><iframe src="https://www.youtube.com/embed/vuak7TA9dbQ" frameborder="0" loading="lazy" allowfullscreen></iframe></div>
-
-<h3 id="ஆணுக்கும்-பெண்ணுக்கும்-ஏன்-இந்த-சின்னம்-வந்ததென்று-புரிகிறதா"><a href="#ஆணுக்கும்-பெண்ணுக்கும்-ஏன்-இந்த-சின்னம்-வந்ததென்று-புரிகிறதா" class="headerlink" title="ஆணுக்கும் பெண்ணுக்கும் ஏன் இந்த சின்னம் வந்ததென்று புரிகிறதா?"></a>ஆணுக்கும் பெண்ணுக்கும் ஏன் இந்த சின்னம் வந்ததென்று புரிகிறதா?</h3><img src="/images/Fy1kyY3akAEnhe6.png" class width="600" height="600">
-
-<h3 id="பைபிளில்-கடவுள்-ஏன்-ஆதாமின்-விலா-எலும்பை-தேர்ந்தெடுத்தார்-என்று-புரிகிறதா"><a href="#பைபிளில்-கடவுள்-ஏன்-ஆதாமின்-விலா-எலும்பை-தேர்ந்தெடுத்தார்-என்று-புரிகிறதா" class="headerlink" title="பைபிளில் கடவுள் ஏன் ஆதாமின் விலா எலும்பை தேர்ந்தெடுத்தார் என்று புரிகிறதா?"></a>பைபிளில் கடவுள் ஏன் ஆதாமின் விலா எலும்பை தேர்ந்தெடுத்தார் என்று புரிகிறதா?</h3><img src="/images/god_adam_eve.jpg" class width="600" height="600">
-
-<h3 id="அர்த்தநாரீஸ்வரர்-கதை-புரிகிறதா"><a href="#அர்த்தநாரீஸ்வரர்-கதை-புரிகிறதா" class="headerlink" title="அர்த்தநாரீஸ்வரர் கதை புரிகிறதா?"></a>அர்த்தநாரீஸ்வரர் கதை புரிகிறதா?</h3><img src="https://vedicfeed.com/wp-content/uploads/2021/03/ardhanarishvara.jpg" class width="600" height="600">
-
-<br>
-<br>
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://thegti.xyz/2025/09/16/%E0%AE%AE%E0%AE%B2%E0%AF%88%E0%AE%95%E0%AE%B3%E0%AF%8D/" data-id="cmnewgimq00198r28dnh30iah" data-title="நீரும் நெருப்பும் 🚫 _____ நீரும் மலையும் ✅" class="article-share-link"><span class="fa fa-share">Share</span></a>
-      
-      
-      
-    </footer>
-  </div>
+சிவன் ஆண் தன்மையும் சக்தி பெண் தன்மையும் சேரும்போது அந்த இடத்தில் ஒரு சக்தி பரிமாற்றம் நடக்கிறது சமநிலை உண்டாகிறது, அல்லது புதிதாக இன்னொரு உயிர் உண்டாகிறது…</p>
   
+  <a href="/2025/09/17/%E0%AE%9A%E0%AE%BF%E0%AE%B5%E0%AE%A9%E0%AF%81%E0%AE%AE%E0%AF%8D-%E0%AE%9A%E0%AE%95%E0%AF%8D%E0%AE%A4%E0%AE%BF%E0%AE%AF%E0%AF%81%E0%AE%AE%E0%AF%8D-%E0%AE%9A%E0%AF%87%E0%AE%B0%E0%AF%8D%E0%AE%A8%E0%AF%8D%E0%AE%A4-%E0%AE%AE%E0%AE%BE%E0%AE%9A%E0%AF%81%E0%AE%9F%E0%AE%BE/" class="read-more">Continue reading →</a>
 </article>
 
-
-
-  
-    <article id="post-மலை-கடவுள்" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+    
+      <article class="article-card">
   <div class="article-meta">
-    <a href="/2025/09/12/%E0%AE%AE%E0%AE%B2%E0%AF%88-%E0%AE%95%E0%AE%9F%E0%AE%B5%E0%AF%81%E0%AE%B3%E0%AF%8D/" class="article-date">
-  <time class="dt-published" datetime="2025-09-11T18:56:03.000Z" itemprop="datePublished">12-09-2025</time>
-</a>
+    <span class="article-date">16 · 09 · 2025</span>
     
   </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
   
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/2025/09/12/%E0%AE%AE%E0%AE%B2%E0%AF%88-%E0%AE%95%E0%AE%9F%E0%AE%B5%E0%AF%81%E0%AE%B3%E0%AF%8D/">மலை கடவுள்</a>
-    </h1>
-  
-
-      </header>
+  <a href="/2025/09/16/%E0%AE%AE%E0%AE%B2%E0%AF%88%E0%AE%95%E0%AE%B3%E0%AF%8D/" class="article-title">
+    நீரும் நெருப்பும் 🚫 _____ நீரும் மலையும் ✅
     
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <br>
-<br>
-
-<p>சில மதங்களும் மரபுகளும் மலைகளில் நிகழும் முக்கியமான தெய்வீக வெளிப்பாடுகள், செய்திகள் அல்லது கடவுளுடனான (அல்லது கடவுள்கள்&#x2F;ஆவிகள்) சந்திப்புகளை விவரிக்கின்றன. மலைகள் பெரும்பாலும் புனித இடங்களாகக் காணப்படுகின்றன. சில முக்கிய எடுத்துக்காட்டுகள் இங்கே:</p>
-<h3 id="இந்திய-துணைக்கண்ட-மதம்"><a href="#இந்திய-துணைக்கண்ட-மதம்" class="headerlink" title="இந்திய துணைக்கண்ட மதம்"></a>இந்திய துணைக்கண்ட மதம்</h3><h4 id="திருச்சி-உச்சிப்பிள்ளையார்-கோவில்"><a href="#திருச்சி-உச்சிப்பிள்ளையார்-கோவில்" class="headerlink" title="திருச்சி உச்சிப்பிள்ளையார் கோவில்"></a>திருச்சி உச்சிப்பிள்ளையார் கோவில்</h4><img src="https://vikatakavi.in/upload/image/2022921231435828.jpeg" class width="600" height="600" title="திருச்சி உச்சிப்பிள்ளையார்" alt="திருச்சி உச்சிப்பிள்ளையார்">
-
-<br>
-
-<h4 id="சிவபெருமான்-கயிலாய-மலையில்-இருப்பதாக-நம்பப்படுகிறது"><a href="#சிவபெருமான்-கயிலாய-மலையில்-இருப்பதாக-நம்பப்படுகிறது" class="headerlink" title="சிவபெருமான் கயிலாய மலையில் இருப்பதாக நம்பப்படுகிறது"></a>சிவபெருமான் கயிலாய மலையில் இருப்பதாக நம்பப்படுகிறது</h4><img src="https://aradhyatours.com/wp-content/uploads/2019/12/Kailash-Journey.png" class width="600" height="600" title="கயிலாய மலை" alt="கயிலாய மலை">
-
-<h4 id="இமய-மலை-கிருஷ்ணா-பரமாத்மா-கோவில்"><a href="#இமய-மலை-கிருஷ்ணா-பரமாத்மா-கோவில்" class="headerlink" title="இமய மலை கிருஷ்ணா பரமாத்மா கோவில்"></a>இமய மலை கிருஷ்ணா பரமாத்மா கோவில்</h4><img src="https://www.tourmyholiday.com/pdf/1754585517111.jpg" class width="600" height="600">
-
-<img src="/images/sthiram.png" class width="600" height="600">
-
-
-<p>பாரதப் போரில் காண்டீபஸ்வாமிக்கு விஸ்வரூப தரிசனம் அருளிய கிருஷ்ண பரமாத்மா, அசைக்க முடியாததில் தான் இமயம் என்று கூறுகிறார்.</p>
-<h4 id="மயிலம்-முருகன்-கோவில்"><a href="#மயிலம்-முருகன்-கோவில்" class="headerlink" title="மயிலம் முருகன் கோவில்"></a>மயிலம் முருகன் கோவில்</h4><img src="/images/mailam.webp" class width="600" height="600" title="மயிலம் முருகன் கோவில்" alt="மயிலம் முருகன் கோவில்">
-
-<br>
-
-<h4 id="திருப்பதி"><a href="#திருப்பதி" class="headerlink" title="திருப்பதி"></a>திருப்பதி</h4><img src="/images/tirupati.jpg" class width="600" height="600" title="திருப்பதி" alt="திருப்பதி">
-
-<br>
-
-<h3 id="கிறிஸ்தவம்"><a href="#கிறிஸ்தவம்" class="headerlink" title="கிறிஸ்தவம்"></a>கிறிஸ்தவம்</h3><p>இயேசு தம் சீடர்களான பேதுரு, யாக்கோபு, யோவான் ஆகியோரை ஒரு உயரமான <strong>மலைக்கு</strong> அழைத்துக்கொண்டு ஜெபித்தார். அந்த மலை சரியாக அடையாளம் காணப்படவில்லை, ஆனால் பாரம்பரியம் பெரும்பாலும் தாபோர் மலை என்று பெயரிடுகிறது.<br>மலையில் இருந்தபோது, ​​இயேசு அவர்களுக்கு முன்பாக மறுரூபமானார், அவரது முகம் பிரகாசித்தது, அவரது ஆடைகள் வெண்மையாக மாறியது.</p>
-<img src="https://www.psephizo.com/wp-content/uploads/2019/02/Transfiguration-Raphael-1518-20.jpg" class width="600" height="600">
-
-<h3 id="புத்த-மதம்"><a href="#புத்த-மதம்" class="headerlink" title="புத்த மதம்"></a>புத்த மதம்</h3><p>தேரவாத புத்த மதத்தில் கழுகு சிகரம் கவுதம புத்தருக்கு மிகவும் பிடித்த இடம் என்று கூறுகிறது. அங்கு தான் பல சூத்திரங்களை தனது சீடர்களுக்கு புத்தர் போதித்தார்.</p>
-<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5d/Vulturepeak1.jpg/1280px-Vulturepeak1.jpg" class width="600" height="600" title="கழுகு சிகரம்" alt="கழுகு சிகரம்">
-
-
-<h3 id="ஜோராஸ்ட்ரியனிசம்"><a href="#ஜோராஸ்ட்ரியனிசம்" class="headerlink" title="ஜோராஸ்ட்ரியனிசம்"></a>ஜோராஸ்ட்ரியனிசம்</h3><p>தீர்க்கதரிசி ஜரதுஸ்ட்ரா (ஜோராஸ்டர்) மலைகளில் தியானம் செய்யும் போது அஹுரா மஸ்டாவிடமிருந்து தனது வெளிப்பாட்டைப் பெற்றதாகக் கூறப்படுகிறது.</p>
-<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/76/Zoroaster_1.jpg/629px-Zoroaster_1.jpg" class width="600" height="600">
-
-<h3 id="இஸ்லாம்"><a href="#இஸ்லாம்" class="headerlink" title="இஸ்லாம்"></a>இஸ்லாம்</h3><p>மக்காவிற்கு அருகிலுள்ள நூர் மலையில் (ஜபல் அல்-நூர்) ஹிரா குகையில் ஜிப்ரீல் தேவதை மூலம் அல்லாஹ்விடமிருந்து முதன்முதலில் வெளிப்பாட்டைப் பெற்றார் நபிகள் நாயகம்.</p>
-<img src="/images/jabal_al_noor.jpg" class width="600" height="600" title="ஜபல் அல்-நூர்" alt="ஜபல் அல்-நூர்">
-
-<br>
-
-<img src="/images/jabal_al_noor2.jpg" class width="600" height="600" title="ஜபல் அல்-நூர்" alt="ஜபல் அல்-நூர்">
-
-<h3 id="யூத-மதம்"><a href="#யூத-மதம்" class="headerlink" title="யூத மதம்"></a>யூத மதம்</h3><p>சினாய் மலை (ஓரேப்): மோசே சீனாய் மலையில் கடவுளிடமிருந்து பத்து கட்டளைகளைப் பெற்றார் (யாத்திராகமம் 19–20).</p>
-<img src="https://media-cldnry.s-nbcnews.com/image/upload/t_fit-1000w,f_auto,q_auto:best/msnbc/Components/Photo_StoryLevel/080304/080304-science-moses-vlarge2-130p.jpg" class width="600" height="600" title="மோசே சீனாய் மலையில்" alt="மோசே சீனாய் மலையில்">
-
-<br>
-
-<img src="https://d3rr2gvhjw0wwy.cloudfront.net/uploads/activity_galleries/310695/2000x2000-0-70-742caff664773edfc53734522048d254.jpg" class width="600" height="600" title="சீனாய் மலை" alt="சீனாய் மலை">
-
-<p>பிற சந்திப்புகள்: ஓரேப் மலையில் கடவுளின் “மென்மையான கிசுகிசுப்பை” எலியா கேட்டார் (1 இராஜாக்கள் 19).</p>
-<h3 id="தமிழ்-மன்னர்களும்-அவர்களது-மக்களும்"><a href="#தமிழ்-மன்னர்களும்-அவர்களது-மக்களும்" class="headerlink" title="தமிழ் மன்னர்களும் அவர்களது மக்களும்"></a>தமிழ் மன்னர்களும் அவர்களது மக்களும்</h3><p>தமிழ் மன்னர்கள் தங்கள் தமிழ் மக்கள் இத்தகைய கடுமையான வழிபாட்டு முறைகளால் பாதிக்கப்படுவதை விரும்பவில்லை. எனவே, அவர்கள் மலை வடிவில் கோயில்களைக் கட்டினார்கள், தமிழ் மக்களுக்கு உதவ நடைபாதைகளாகக் கற்களை அமைத்தார்கள்.</p>
-<img src="https://upload.wikimedia.org/wikipedia/commons/0/0a/Thanjavur%2C_Brihadishwara_Temple_%287013915633%29.jpg" class width="600" height="600">
-
-<br>
-
-<img src="/images/rajarajachozhan.jpg" class width="600" height="600">
-
-<br>
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://thegti.xyz/2025/09/12/%E0%AE%AE%E0%AE%B2%E0%AF%88-%E0%AE%95%E0%AE%9F%E0%AE%B5%E0%AF%81%E0%AE%B3%E0%AF%8D/" data-id="cmnewgimo00128r280krm9dyz" data-title="மலை கடவுள்" class="article-share-link"><span class="fa fa-share">Share</span></a>
-      
-      
-      
-    </footer>
-  </div>
+  </a>
   
+  
+    <p class="article-excerpt">
+
+
+ஆணில் இருந்து பெண் படைக்கப்பட்டாள்ஆதியாகமம் (Genesis): அதிகாரம் 2: 
+வசனம் 21. அப்பொழுது தேவனாகிய கர்த்தர் ஆதாமுக்கு அயர்ந்த நித்திரையை வரப்பண்ணினார், அவன் நித்திரையடைந்தான்; அவர் அவன் விலா எலும்பு…</p>
+  
+  <a href="/2025/09/16/%E0%AE%AE%E0%AE%B2%E0%AF%88%E0%AE%95%E0%AE%B3%E0%AF%8D/" class="read-more">Continue reading →</a>
 </article>
 
-
-
-  
-    <article id="post-3-பாடி-பிராப்ளம்" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+    
+      <article class="article-card">
   <div class="article-meta">
-    <a href="/2025/09/09/3-%E0%AE%AA%E0%AE%BE%E0%AE%9F%E0%AE%BF-%E0%AE%AA%E0%AE%BF%E0%AE%B0%E0%AE%BE%E0%AE%AA%E0%AF%8D%E0%AE%B3%E0%AE%AE%E0%AF%8D/" class="article-date">
-  <time class="dt-published" datetime="2025-09-09T14:33:25.000Z" itemprop="datePublished">09-09-2025</time>
-</a>
+    <span class="article-date">12 · 09 · 2025</span>
     
   </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
   
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/2025/09/09/3-%E0%AE%AA%E0%AE%BE%E0%AE%9F%E0%AE%BF-%E0%AE%AA%E0%AE%BF%E0%AE%B0%E0%AE%BE%E0%AE%AA%E0%AF%8D%E0%AE%B3%E0%AE%AE%E0%AF%8D/">3 பாடி பிராப்ளம்</a>
-    </h1>
-  
-
-      </header>
+  <a href="/2025/09/12/%E0%AE%AE%E0%AE%B2%E0%AF%88-%E0%AE%95%E0%AE%9F%E0%AE%B5%E0%AF%81%E0%AE%B3%E0%AF%8D/" class="article-title">
+    மலை கடவுள்
     
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <br>
-<br>
-
-<p>கடந்த ஒரு மாத காலம் உங்களுடன் பகிர்ந்த உலகையே குலுக்கிய தகவல்களை, Netflixல் படமாகவே எடுத்து வெளியிட்டுள்ளனர். அது தான் <strong>3 பாடி பிராப்ளம்</strong>.</p>
-<div class="video-container"><iframe src="https://www.youtube.com/embed/caxiX38DK68" frameborder="0" loading="lazy" allowfullscreen></iframe></div>
-
-<p>புரோட்டான் துகள்கள்<br>LHC<br>CERN<br>மலைகள்<br>என்று  நான் சொன்ன அனைத்தையும் படமாக்கியுள்ளனர் </p>
-<p>ஒரு விஷயத்தை தவிர, இவை எல்லாம் தமிழ் மன்னர்கள் கட்டிய கோவில்களில் இருந்து திருடிச்செல்லப்பட்டவை என்கிற முக்கிய விஷயத்தை காட்டவில்லை.</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://thegti.xyz/2025/09/09/3-%E0%AE%AA%E0%AE%BE%E0%AE%9F%E0%AE%BF-%E0%AE%AA%E0%AE%BF%E0%AE%B0%E0%AE%BE%E0%AE%AA%E0%AF%8D%E0%AE%B3%E0%AE%AE%E0%AF%8D/" data-id="cmnewgimf00008r285r1g2po8" data-title="3 பாடி பிராப்ளம்" class="article-share-link"><span class="fa fa-share">Share</span></a>
-      
-      
-      
-    </footer>
-  </div>
+  </a>
   
+  
+    <p class="article-excerpt">
+
+
+சில மதங்களும் மரபுகளும் மலைகளில் நிகழும் முக்கியமான தெய்வீக வெளிப்பாடுகள், செய்திகள் அல்லது கடவுளுடனான (அல்லது கடவுள்கள்&amp;#x2F;ஆவிகள்) சந்திப்புகளை விவரிக்கின்றன. மலைகள் பெரும்பாலும் புனித இடங்களாக…</p>
+  
+  <a href="/2025/09/12/%E0%AE%AE%E0%AE%B2%E0%AF%88-%E0%AE%95%E0%AE%9F%E0%AE%B5%E0%AF%81%E0%AE%B3%E0%AF%8D/" class="read-more">Continue reading →</a>
 </article>
 
-
-
-  
-
-
-  <nav id="page-nav">
     
-    <a class="extend prev" rel="prev" href="/page/5/">&laquo; Prev</a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/4/">4</a><a class="page-number" href="/page/5/">5</a><span class="page-number current">6</span><a class="page-number" href="/page/7/">7</a><a class="page-number" href="/page/8/">8</a><span class="space">&hellip;</span><a class="page-number" href="/page/15/">15</a><a class="extend next" rel="next" href="/page/7/">Next &raquo;</a>
-  </nav>
 
-</section>
-        
-      </div>
-      <footer id="footer">
-  
-  <div class="outer">
-    <div id="footer-info" class="inner">
+    
       
-      &copy; 2026 R Stalin<br>
-      Powered by <a href="https://thegti.xyz" target="_blank">The GTI</a>
+      <nav class="pagination">
+        
+          <a href="/page/5/" class="page-btn">← Prev</a>
+        
+        
+          <a href="/" class="page-btn">01</a>
+          <span class="page-btn page-ellipsis">…</span>
+        
+        
+          <a href="/page/4"
+             class="page-btn">
+            04
+          </a>
+        
+          <a href="/page/5"
+             class="page-btn">
+            05
+          </a>
+        
+          <a href="/page/6"
+             class="page-btn active">
+            06
+          </a>
+        
+          <a href="/page/7"
+             class="page-btn">
+            07
+          </a>
+        
+          <a href="/page/8"
+             class="page-btn">
+            08
+          </a>
+        
+        
+          <span class="page-btn page-ellipsis">…</span>
+          <a href="/page/15" class="page-btn">15</a>
+        
+        
+          <a href="/page/7/" class="page-btn">Next →</a>
+        
+      </nav>
+    
+  </main>
+
+  <aside class="sidebar">
+  <div class="sidebar-section">
+    <div class="sidebar-heading">Topics</div>
+    <div class="tag-cloud">
+      
+        <a href="/tags/666/" class="tag-pill">666</a>
+      
     </div>
   </div>
+  <div class="sidebar-section">
+    <div class="sidebar-heading">Archive</div>
+    <ul class="archive-list">
+      
+        <li class="archive-item">
+          <a href="/2026/04/01/The-Second-House/">இரண்டாம் வீடு(PAAVAM) - Second House</a>
+          <span class="archive-count">04/26</span>
+        </li>
+      
+        <li class="archive-item">
+          <a href="/2026/03/31/Fear-it/">கவலை வேண்டாமா?</a>
+          <span class="archive-count">03/26</span>
+        </li>
+      
+        <li class="archive-item">
+          <a href="/2026/03/30/The-Devil-s-Image/">பிசாசின் உருவம் The Devil&#39;s Image</a>
+          <span class="archive-count">03/26</span>
+        </li>
+      
+        <li class="archive-item">
+          <a href="/2026/03/29/All-rounder-666/">ஜெயலலிதா எனும் நான் ஒரு 666</a>
+          <span class="archive-count">03/26</span>
+        </li>
+      
+        <li class="archive-item">
+          <a href="/2026/03/28/Check-123-Check/">Check 123 Check</a>
+          <span class="archive-count">03/26</span>
+        </li>
+      
+    </ul>
+  </div>
+  <div class="sidebar-section">
+    <div class="sidebar-heading">About</div>
+    <p style="font-size:14px;color:var(--text-muted);line-height:1.7;font-weight:300">Written by R. Stalin. Exploring connections between ancient esoteric traditions and modern history.</p>
+  </div>
+</aside>
+
+</div>
+
+  </div>
+  <footer class="site-footer">
+  <span class="footer-text">© 2026 <span>R Stalin</span> · The GTI</span>
 </footer>
 
-<script>
-  function toggleText() {
-    const text = document.getElementById("hiddenText");
-    text.style.display = (text.style.display === "none") ? "block" : "none";
-  }
-</script>
-
+  <!-- Quick Action Button -->
+  <div class="qab notranslate">
+    <button class="qab-btn" aria-label="Quick actions" aria-expanded="false">···</button>
+    <div class="qab-panel">
+      <button id="theme-toggle" class="theme-toggle qab-action" aria-label="Toggle theme">☾ Dark</button>
+      <select id="lang-select" class="lang-select qab-action" aria-label="Language">
+        <option value="en">EN</option>
+        <option value="ta">தமிழ்</option>
+        <option value="hi">हिन्दी</option>
+        <option value="kn">ಕನ್ನಡ</option>
+        <option value="ml">മലയാളം</option>
+        <option value="te">తెలుగు</option>
+        <option value="zh-CN">中文</option>
+        <option value="es">Español</option>
+        <option value="fr">Français</option>
+        <option value="de">Deutsch</option>
+        <option value="ru">Русский</option>
+        <option value="ar">العربية</option>
+        <option value="ja">日本語</option>
+      </select>
+      <div class="qab-divider"></div>
+      <button class="qab-scroll qab-action" data-scroll="top" aria-label="Scroll to top">↑ Top</button>
+      <button class="qab-scroll qab-action" data-scroll="mid" aria-label="Scroll to middle">↕ Mid</button>
+      <button class="qab-scroll qab-action" data-scroll="bottom" aria-label="Scroll to bottom">↓ Bottom</button>
     </div>
-    <nav id="mobile-nav">
-  
-    <a href="/" class="mobile-nav-link">Home</a>
-  
-    <a href="/archives" class="mobile-nav-link">Archives</a>
-  
-</nav>
-    
-
-
-<script src="/js/jquery-3.6.4.min.js"></script>
-
-
-
-  
-<script src="/fancybox/jquery.fancybox.min.js"></script>
-
-
-
-
-<script src="/js/script.js"></script>
-
-
-
-
-
   </div>
+
+  <script src="/js/theme.js"></script>
+  <script src="/js/i18n.js"></script>
+  <script src="/js/lottie-intro.js"></script>
 </body>
 </html>

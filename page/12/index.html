@@ -1,395 +1,269 @@
 <!DOCTYPE html>
-<html>
+<html lang="en" data-theme="dark">
 <head>
-  <meta charset="utf-8">
-  <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-0KVQ5PMHNQ"></script>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The GTI</title>
+<meta name="description" content="Posts on general technical data and analytics">
+<link rel="stylesheet" href="/css/main.css">
 <script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-0KVQ5PMHNQ');
+  // Prevent flash of wrong theme
+  (function(){
+    var t = localStorage.getItem('gti-theme') ||
+      (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+    document.documentElement.setAttribute('data-theme', t);
+  })();
 </script>
-  
-  <title>The GTI</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="Posts on general technical data and analytics">
-<meta property="og:type" content="website">
-<meta property="og:title" content="The GTI">
-<meta property="og:url" content="https://thegti.xyz/page/12/index.html">
-<meta property="og:site_name" content="The GTI">
-<meta property="og:description" content="Posts on general technical data and analytics">
-<meta property="og:locale" content="en_US">
-<meta property="article:author" content="R Stalin">
-<meta name="twitter:card" content="summary">
-  
-    <link rel="alternate" href="/atom.xml" title="The GTI" type="application/atom+xml">
-  
-  
-    <link rel="shortcut icon" href="/favicon.png">
-  
-  
-  
-<link rel="stylesheet" href="/css/style.css">
+<div id="google_translate_element" style="display:none"></div>
+<script>
+  function googleTranslateElementInit() {
+    new google.translate.TranslateElement({
+      pageLanguage: 'ta',
+      includedLanguages: 'en,ta,hi,kn,ml,te,zh-CN,es,fr,de,ru,ar,ja',
+      autoDisplay: false
+    }, 'google_translate_element');
+  }
+</script>
+<script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit" async></script>
 
-  
-    
-<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
-
-  
-  
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fork-awesome@1.2.0/css/fork-awesome.min.css">
-
-<!-- hexo injector head_end start --><script defer src="https://umami-production-af63.up.railway.app/script.js" data-website-id="c10692f6-309a-4c2f-a3d4-3b66ac48eb5f"></script><!-- hexo injector head_end end --><meta name="generator" content="Hexo 7.3.0"></head>
-
+  <script type="module" src="https://unpkg.com/@dotlottie/player-component@2.7.12/dist/dotlottie-player.mjs"></script>
+<meta name="generator" content="Hexo 7.3.0"></head>
 <body>
-  <div id="container">
-    <div id="wrap">
-      <header id="header">
-  <div id="banner"></div>
-  <div id="header-outer" class="outer">
-    <div id="header-title" class="inner">
-      <h1 id="logo-wrap">
-        <a href="/" id="logo"></a>
-      </h1>
-      
-        <h2 id="subtitle-wrap">
-          <a href="/" id="subtitle"></a>
-        </h2>
-      
-    </div>
-    <div id="header-inner" class="inner">
-      <nav id="main-nav">
-        <a id="main-nav-toggle" class="nav-icon"><span class="fa fa-bars"></span></a>
-        
-          <a class="main-nav-link" href="/">Home</a>
-        
-          <a class="main-nav-link" href="/archives">Archives</a>
-        
-      </nav>
-      <nav id="sub-nav">
-        
-        
-          <a class="nav-icon" href="/atom.xml" title="RSS Feed"><span class="fa fa-rss"></span></a>
-        
-        <a class="nav-icon nav-search-btn" title="Search"><span class="fa fa-search"></span></a>
-      </nav>
-      <div id="search-form-wrap">
-        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://thegti.xyz"></form>
-      </div>
-    </div>
+  <!-- Lottie intro overlay — shown only on first visit -->
+  <div id="lottie-intro-overlay" style="display:none">
+    <dotlottie-player
+      id="lottie-welcome"
+      src="/lottie-welcome.lottie"
+      autoplay
+      loop="false"
+      speed="1"
+    ></dotlottie-player>
+    <dotlottie-player
+      id="lottie-player"
+      src="/lottie-intro.lottie"
+      autoplay
+      loop
+      speed="1"
+    ></dotlottie-player>
+    <button id="lottie-continue-btn">Continue to thegti.xyz ›</button>
+  </div>
+
+  <div id="reading-progress"></div>
+  <header class="site-header">
+  <div class="banner-container">
+    <img src="/images/hero-banner-dark.png" alt="The GTI" class="header-banner banner-dark">
+    <img src="/images/hero-banner-light.png" alt="The GTI" class="header-banner banner-light">
+  </div>
+  <div class="site-top-row">
+    <nav class="site-nav notranslate">
+      <ul class="nav-links">
+        <li><a href="/">Home</a></li>
+        <li><a href="/archives">Archives</a></li>
+        <li><a href="/about">About</a></li>
+      </ul>
+    </nav>
   </div>
 </header>
 
-      <div class="outer">
-        <section id="main">
-  
-    <article id="post-மனிதர்கள்-கடவுளை-எப்படி-அடையாளம்-காண்கிறார்கள்" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="site-wrapper">
+    <div class="site-main">
+  <main class="post-feed">
+    
+      <article class="article-card">
   <div class="article-meta">
-    <a href="/2025/08/21/%E0%AE%AE%E0%AE%A9%E0%AE%BF%E0%AE%A4%E0%AE%B0%E0%AF%8D%E0%AE%95%E0%AE%B3%E0%AF%8D-%E0%AE%95%E0%AE%9F%E0%AE%B5%E0%AF%81%E0%AE%B3%E0%AF%88-%E0%AE%8E%E0%AE%AA%E0%AF%8D%E0%AE%AA%E0%AE%9F%E0%AE%BF-%E0%AE%85%E0%AE%9F%E0%AF%88%E0%AE%AF%E0%AE%BE%E0%AE%B3%E0%AE%AE%E0%AF%8D-%E0%AE%95%E0%AE%BE%E0%AE%A3%E0%AF%8D%E0%AE%95%E0%AE%BF%E0%AE%B1%E0%AE%BE%E0%AE%B0%E0%AF%8D%E0%AE%95%E0%AE%B3%E0%AF%8D/" class="article-date">
-  <time class="dt-published" datetime="2025-08-20T20:37:53.000Z" itemprop="datePublished">21-08-2025</time>
-</a>
+    <span class="article-date">22 · 08 · 2025</span>
     
   </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
   
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/2025/08/21/%E0%AE%AE%E0%AE%A9%E0%AE%BF%E0%AE%A4%E0%AE%B0%E0%AF%8D%E0%AE%95%E0%AE%B3%E0%AF%8D-%E0%AE%95%E0%AE%9F%E0%AE%B5%E0%AF%81%E0%AE%B3%E0%AF%88-%E0%AE%8E%E0%AE%AA%E0%AF%8D%E0%AE%AA%E0%AE%9F%E0%AE%BF-%E0%AE%85%E0%AE%9F%E0%AF%88%E0%AE%AF%E0%AE%BE%E0%AE%B3%E0%AE%AE%E0%AF%8D-%E0%AE%95%E0%AE%BE%E0%AE%A3%E0%AF%8D%E0%AE%95%E0%AE%BF%E0%AE%B1%E0%AE%BE%E0%AE%B0%E0%AF%8D%E0%AE%95%E0%AE%B3%E0%AF%8D/">மனிதர்கள் கடவுளை எப்படி உணர்கிறார்கள் ?</a>
-    </h1>
-  
-
-      </header>
+  <a href="/2025/08/22/7-%E0%AE%9A%E0%AE%95%E0%AF%8D%E0%AE%95%E0%AE%B0%E0%AE%99%E0%AF%8D%E0%AE%95%E0%AE%B3%E0%AF%8D-%EA%A9%9C/" class="article-title">
+    மேக்னெட்டோ  என்செபலோ  கிராபி
     
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <p>ஏதேனும் ஒரு பொருளைக் கண்டறிய வேண்டுமா? அந்தப் பொருளைக் கண்டறியும் திறன் கொண்ட ஒரு பார்வையாளர் இருக்க வேண்டும்.</p>
-<p>LHC இல் துரிதப்படுத்தப்பட்ட மற்றும் தெறிக்கும் துகள்களைக் காணலாம் ALICE, ATLAS, CMS மற்றும் பிற சமீபத்திய கண்டறிதல் சோதனைகளில் துகள்களைக் கண்டறிய பின்வரும் கூறுகள் உள்ளன.</p>
-<p>சிலிக்கான் (Si)<br>லீட் (Pb) மற்றும் லீட் டங்ஸ்டேட் (PbWO₄)<br>ஆர்கான் (Ar)<br>சிண்டிலேட்டிங் பொருட்கள்</p>
-<img src="https://image4.slideserve.com/8965074/silicon-detectors-at-lhc-l.jpg" class width="500" height="500">
-
-
-<p>துரிதப்படுத்தப்பட்ட புரோட்டான் துகள்கள் ஒன்றையொன்று மோதும்போது, அதன் விளைவாக வரும் தெறிப்பு இந்த கூறுகளால் உறிஞ்சப்படுகிறது. சில கூறுகள் நீலம், பச்சை ஒளிரும் ஒளியை உருவாக்குகின்றன, இதனால் துகள்களைக் கண்டறியும்.</p>
-<p>நாம் ஒரு கோவிலில் இருக்கும்போது, கோயில் கலசம் மற்றும் கட்டமைப்பால் துரிதப்படுத்தப்பட்ட வானத் துகள்கள் நம் உடலுடனும் தொடர்பு கொள்ளும்.</p>
-<img src="/images/kalasam_effect.jpg" class width="500" height="500">
-
-
-<p>இந்தத் துகள்களை அடையாளம் காணும் திறன் எந்த உடல் பாகத்திற்கு உள்ளது?</p>
-<p>எடுத்துக்காட்டாக, மனித கண்ணில் ஒளி ஏற்பி தண்டுகள் உள்ளன, அவை ஒளியைக் கண்டறிந்து அவற்றை மின் சமிக்ஞையாக மாற்றி பின்னர் செயலாக்கத்திற்காக மூளைக்கு அனுப்பப்படுகின்றன.</p>
-<p>மனித கண்களில் ஒளி கண்டறிதலுக்கு காரணமான தனிமங்கள்:</p>
-<ol>
-<li>விழித்திரை புரதங்கள்</li>
-<li>ஆப்சின் புரதங்கள்</li>
-<li>ரோடாப்சின்</li>
-</ol>
-<p>ஒளி ஃபோட்டானால் ஆனது, அது மனிதனுக்குள் நுழையும் போது அது ஒளி ஏற்பி தண்டுகள் மற்றும் கூம்புகளுடன் தொடர்பு கொள்கிறது. நிகழ்வு ஃபோட்டான் அவற்றில் உள்ள எலக்ட்ரான்களை உற்சாகப்படுத்துகிறது, இதனால் மின் சமிக்ஞைகளாக மாறுகிறது.</p>
-<img src="https://www.researchgate.net/profile/Georges-Goetz/publication/306030616/figure/fig1/AS:11431281207412905@1701182348285/The-human-visual-system-a-Visual-perception-begins-in-the-eye-where-the-cornea-and.jpg" class width="500" height="500">
-
-
-<p>இதேபோல், துரிதப்படுத்தப்பட்ட ஆற்றல் + வேகமான சார்ஜ் செய்யப்பட்ட புரோட்டான்கள் மற்றும் பிற துகள்கள் மனித உடலிலும் உறிஞ்சப்படுகின்றன.</p>
-<img src="https://www.pharmacy180.com/media/imgph04/ox83INH.jpg" class width="500" height="500" title="பினியல் சுரப்பி" alt="பினியல் சுரப்பி">
-
-<p>மனித உடலின் பினியல் சுரப்பியில், காந்தம் (மிகக் குறைந்த அளவு), மூளை மணல் (LHC மோதல் இயந்திரத்தில் பயன்படுத்தப்படும் சிலிக்காவைப் போன்றது) உள்ளது. இது தானாகவே மின்காந்த புலங்களை உருவாக்குகிறது.</p>
-<img src="https://upload.wikimedia.org/wikipedia/commons/b/be/Histopathology_of_brain_sand_%28corpus_arenaceum%29_in_cerebral_white_matter.jpg" class width="500" height="500" title="கார்போரா அரினேசியா" alt="கார்போரா அரினேசியா">
-
-<p>பினியல் சுரப்பியில், “கார்போரா அரினேசியா” என்றும் அழைக்கப்படும் மூளை மணலில் பைசோ எலக்ட்ரிக் பண்புகள் உள்ளன. துரிதப்படுத்தப்பட்ட துகள்கள் அவற்றுடன் தொடர்பு கொள்ளும்போது அவை ஒளியை உருவாக்கும் சாத்தியக்கூறு உள்ளது.</p>
-<p>தலையில் உள்ள கண் புலப்படும் ஒளியிலிருந்து ஃபோட்டான்களைக் கண்டறிய முடியும் என்பது போல. மேலே கூறப்பட்ட தனிமங்களைப் பயன்படுத்தி பினியல் சுரப்பி துரிதப்படுத்தப்பட்ட துகள்களைக் கண்டறிய முடியும். இதுதான், அகக் கண்ணால் உள்ளே ஒளியைக் காணலாம் என்று நமக்குச் சொல்லப்படுகிறது.<br>அதனால்தான் பீனியல் சுரப்பியை மூன்றாவது கண் என்று சொல்கிறோம், அது ஒளியைக் காண முடியும் என்று விவரிக்கிறது.</p>
-<img src="https://i.ytimg.com/vi/kqCR2YZQtBQ/sddefault.jpg" class width="500" height="500" title="piezo electric light effect" alt="piezo electric light effect">
-
-<p>கண்கள் ஒரு பொருளிலிருந்து ஒளியின் புலப்படும் நிறமாலையைக் கண்டறிந்து, அவற்றை மின் சமிக்ஞையாக மாற்றி மூளைக்கு அனுப்புகின்றன, மூளை அந்தத் தரவைச் செயலாக்கி பார்வையை உருவாக்குகிறது. பீனியல் சுரப்பி துகள்கள் மற்றும் பிற தொடர்புகளைக் கண்டறிந்து அவற்றை மின் சமிக்ஞைகளாக மாற்றி மூளைக்கு அனுப்புகிறது. இது மூளையில் ஒரு பார்வையை உருவாக்குகிறது. எனவே இதற்கு ‘மூன்றாவது கண்’ என்று பெயர்.</p>
-<img src="https://images.squarespace-cdn.com/content/v1/5caaad10e5f7d161a45a641b/1643581579986-WEMCAO9N34WH7113R3IR/Shiva.png" class width="500" height="500" title="இறைவன் சிவபெருமான் மூன்றாவது கண்" alt="இறைவன் சிவபெருமான் மூன்றாவது கண்">
-
-
-<p>மனிதர்கள் நம்மில் உள்ள கடவுளை இப்படித்தான் அடையாளம் கண்டு உணர்கிறார்கள். கடவுள் மூன்றாவது கண்ணில் காணப்படுகிறார், உணரப்படுகிறார். அதனால்தான் யோகிகள் தியானத்தின் போது ஒளியைக் காண்கிறார்கள் என்று கூறுகிறார்கள்.</p>
-<p>அறிவியலின் உச்சமான CERN நமது சிவபெருமானை இறைவன் என்று அழைப்பதை இப்போது நாம் புரிந்து கொள்ளலாம்.</p>
-<img src="https://cds.cern.ch/record/768579/files/0406039_02.jpg?subformat=icon-1440&version=1" class width="500" height="500" title="CERN, அணு ஆராய்ச்சிக்கான ஐரோப்பிய அமைப்பில்  சிவன் சிலை" alt="அறிவியலில் ஒரு முக்கிய சிகரமான, CERN நமது சிவனை இறைவன் என்று அழைக்கிறது.">
-
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://thegti.xyz/2025/08/21/%E0%AE%AE%E0%AE%A9%E0%AE%BF%E0%AE%A4%E0%AE%B0%E0%AF%8D%E0%AE%95%E0%AE%B3%E0%AF%8D-%E0%AE%95%E0%AE%9F%E0%AE%B5%E0%AF%81%E0%AE%B3%E0%AF%88-%E0%AE%8E%E0%AE%AA%E0%AF%8D%E0%AE%AA%E0%AE%9F%E0%AE%BF-%E0%AE%85%E0%AE%9F%E0%AF%88%E0%AE%AF%E0%AE%BE%E0%AE%B3%E0%AE%AE%E0%AF%8D-%E0%AE%95%E0%AE%BE%E0%AE%A3%E0%AF%8D%E0%AE%95%E0%AE%BF%E0%AE%B1%E0%AE%BE%E0%AE%B0%E0%AF%8D%E0%AE%95%E0%AE%B3%E0%AF%8D/" data-id="cmnewgimo000y8r28d2k1dvbl" data-title="மனிதர்கள் கடவுளை எப்படி உணர்கிறார்கள் ?" class="article-share-link"><span class="fa fa-share">Share</span></a>
-      
-      
-      
-    </footer>
-  </div>
+  </a>
   
+  
+    <p class="article-excerpt">
+
+
+
+
+
+மனித மூளையில் மின்சாரம் பாய்கிறது, இது பல்வேறு உறுப்புகளிலிருந்து முக்கிய தகவல்களைப் பெறுவதற்கும், கட்டுப்படுத்துவதற்கும் பொறுப்பாகும்.
+இந்த மின்சார ஓட்டம் அதைச் சுற்றியுள்ள காந்தப்புலங்களை ஏற்…</p>
+  
+  <a href="/2025/08/22/7-%E0%AE%9A%E0%AE%95%E0%AF%8D%E0%AE%95%E0%AE%B0%E0%AE%99%E0%AF%8D%E0%AE%95%E0%AE%B3%E0%AF%8D-%EA%A9%9C/" class="read-more">Continue reading →</a>
 </article>
 
-
-
-  
-    <article id="post-ரைஸ்-புல்லிங்" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+    
+      <article class="article-card">
   <div class="article-meta">
-    <a href="/2025/08/17/%E0%AE%B0%E0%AF%88%E0%AE%B8%E0%AF%8D-%E0%AE%AA%E0%AF%81%E0%AE%B2%E0%AF%8D%E0%AE%B2%E0%AE%BF%E0%AE%99%E0%AF%8D/" class="article-date">
-  <time class="dt-published" datetime="2025-08-17T17:01:26.000Z" itemprop="datePublished">17-08-2025</time>
-</a>
+    <span class="article-date">21 · 08 · 2025</span>
     
   </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
   
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/2025/08/17/%E0%AE%B0%E0%AF%88%E0%AE%B8%E0%AF%8D-%E0%AE%AA%E0%AF%81%E0%AE%B2%E0%AF%8D%E0%AE%B2%E0%AE%BF%E0%AE%99%E0%AF%8D/">.&gt;&gt;&gt; ரைஸ் புல்லிங் 🚫 &lt;&lt;&lt; ||| &gt;&gt;&gt; கலசம் புல்லிங்  ✅  &lt;&lt;&lt;</a>
-    </h1>
-  
-
-      </header>
+  <a href="/2025/08/21/%E0%AE%AE%E0%AE%A9%E0%AE%BF%E0%AE%A4%E0%AE%B0%E0%AF%8D%E0%AE%95%E0%AE%B3%E0%AF%8D-%E0%AE%95%E0%AE%9F%E0%AE%B5%E0%AF%81%E0%AE%B3%E0%AF%88-%E0%AE%8E%E0%AE%AA%E0%AF%8D%E0%AE%AA%E0%AE%9F%E0%AE%BF-%E0%AE%85%E0%AE%9F%E0%AF%88%E0%AE%AF%E0%AE%BE%E0%AE%B3%E0%AE%AE%E0%AF%8D-%E0%AE%95%E0%AE%BE%E0%AE%A3%E0%AF%8D%E0%AE%95%E0%AE%BF%E0%AE%B1%E0%AE%BE%E0%AE%B0%E0%AF%8D%E0%AE%95%E0%AE%B3%E0%AF%8D/" class="article-title">
+    மனிதர்கள் கடவுளை எப்படி உணர்கிறார்கள் ?
     
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <br>
-<br>
-
-<p>இது வரையில் நாம் CERN, LHC, particle accelerators பார்த்து தெரிந்தவற்றை அப்படியே படக் காட்சிகளாக எடுத்து உண்மைகளை புட்டு புட்டு வைத்திருக்கிறார்கள். ஆனாலும் கலசத்தின் இந்த தன்மையை <strong>“நம்மிடம்”</strong> இருந்து மறைப்பதற்குத் தான் இந்த போலி ரைஸ் புல்லிங் காட்சிகள். கீழே உள்ள வீடியோவை பாருங்கள் புரியும்.</p>
-<div class="video-container">
- <iframe width="270" height="300" src="https://www.youtube.com/embed/z_NGG-ugC6k?start=816&end=933" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe> 
-</div>
-
-<h2 id="வாருங்கள்-ஏமாறுவோம்"><a href="#வாருங்கள்-ஏமாறுவோம்" class="headerlink" title="வாருங்கள் ஏமாறுவோம்"></a>வாருங்கள் ஏமாறுவோம்</h2><p>இந்த படத்தின் காட்சிகள் கோவில் கலசம் அரிசி இழுப்பது ஒரு மோசடி என்று நம்மை நினைக்க வைக்கிறது. இந்த காட்சிகள் பணத்திற்கான மதிப்பை அதிகரிக்கின்றன மற்றும் கோவில் கலசத்தை மோசடிக்கு பயன்படுத்தப்படும் ஒரு கேலிப் பொருளாக சித்தரிக்கின்றன.</p>
-<p>உண்மையான மோசடி என்ன தெரியுமா? அந்த கலசத்துக்கு எந்த சக்தியும் இல்லையென்று <strong>நம்மை</strong> நம்ப வைக்கிறார்களே அது தான் !</p>
-<div class="video-container"><iframe src="https://www.youtube.com/embed/M0AwDMfWC4I" frameborder="0" loading="lazy" allowfullscreen></iframe></div>
-
-<p>திரைப்படக் காட்சிகளில் உலோகத்தால் செய்யப்பட்ட அரிசியையும், கலசத்திற்குள் சில காந்தப் பொருட்களையும் வைத்து, அதுதான் இழுக்கும் சக்தியை ஏற்படுத்துகிறது என்பதைக் காட்டுகிறார்கள்.</p>
-<h4 id="இன்னொரு-படத்தில்-கோவில்-கலசத்திற்கு-இப்படிப்பட்ட-தன்மைகள்-இருக்கிறதென்ற-உண்மையை-சொல்கிறார்கள்"><a href="#இன்னொரு-படத்தில்-கோவில்-கலசத்திற்கு-இப்படிப்பட்ட-தன்மைகள்-இருக்கிறதென்ற-உண்மையை-சொல்கிறார்கள்" class="headerlink" title="இன்னொரு படத்தில், கோவில் கலசத்திற்கு இப்படிப்பட்ட தன்மைகள் இருக்கிறதென்ற உண்மையை சொல்கிறார்கள்."></a>இன்னொரு படத்தில், கோவில் கலசத்திற்கு இப்படிப்பட்ட தன்மைகள் இருக்கிறதென்ற உண்மையை சொல்கிறார்கள்.</h4><div class="video-container">
-<iframe width="270" height="300" src="https://www.youtube.com/embed/ogoEwLi-Cek?start=4217&end=4278" title="Thoppi Full Movie HD | Murali Ram | Raksha Raj | GM Kumar | Arul Das" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-</div>
-
-<p>ஏன் இப்படிச் செய்கிறார்கள்? </p>
-<p>அறிவியல் பூர்வமாக கோவில் கலசத்தின் உண்மையான பண்புகளை போலியாக சித்தரித்து அதை மட்டம் தட்டுவதே அவர்கள் நோக்கம், அதை ஒரு அலங்காரப் பொருளாக மட்டுமே எல்லோரும் கருதவேண்டும் என்ற நோக்குத்துடன் இந்த காட்சிகள் வைக்கப்பட்டுள்ளன.</p>
-<h2 id="அப்போ-ரைஸ்-புல்லிங்-போலியா"><a href="#அப்போ-ரைஸ்-புல்லிங்-போலியா" class="headerlink" title="அப்போ ரைஸ் புல்லிங் போலியா?"></a>அப்போ ரைஸ் புல்லிங் போலியா?</h2><h3 id="உண்மையில்-ரைஸ்-புல்லிங்-வேலை-செய்கிறது"><a href="#உண்மையில்-ரைஸ்-புல்லிங்-வேலை-செய்கிறது" class="headerlink" title="உண்மையில் ரைஸ் புல்லிங் வேலை செய்கிறது."></a>உண்மையில் ரைஸ் புல்லிங் வேலை செய்கிறது.</h3><div class="video-container"><iframe src="https://www.youtube.com/embed/TwRcl7LgM1Y" frameborder="0" loading="lazy" allowfullscreen></iframe></div>
-<div class="video-container"><iframe src="https://www.youtube.com/embed/By518janS2g" frameborder="0" loading="lazy" allowfullscreen></iframe></div>
-
-<p>கோவில் கலசம் ஒரு மோசடி பொருள் என்று ரைஸ் புல்லிங் போல் நடித்து, மக்களுக்கு கோவில்கள் மீது அவநம்பிக்கையும், தங்கள் மன்னர்களின் மீது வெறுப்பையும் வர  இப்படி மட்டம் தட்டி படம் எடுத்துள்ளனர். ஆனால் உண்மையில் அவர்கள் தமிழ் மன்னர் கோயில்களில் இருந்து <strong>“கலசம் புல்லிங்”</strong> செய்துள்ளனர்.</p>
-<img src="https://ukno.in/uploads/gallery/Sri_Swaminatha_Swamy_Temple_Kalasam_Manufacturing_Nilaiyam_352678793.jpg" class width="500" height="500" title="கலசம்" alt="கலசம்">
-<br>
-<br>
-<img src="https://mod.fnal.gov/mod/stillphotos/2019/0100/19-0123-02.hr.jpg" class width="500" height="500" title="கலசம் புல்லிங்" alt="கலசம் புல்லிங்">
-<br>
-<br>
-
-
-<h3 id="எதற்க்காக-எப்படி-செய்கிறார்கள்"><a href="#எதற்க்காக-எப்படி-செய்கிறார்கள்" class="headerlink" title="எதற்க்காக எப்படி செய்கிறார்கள்?"></a>எதற்க்காக எப்படி செய்கிறார்கள்?</h3><p>தமிழ் மன்னர்களின் கோவில் பொருட்களை திருடி, ஏதோ அவர்கள் தான் கண்டுபிடித்தது போல காட்டி <strong>திருட்டு பெருமை</strong> தேடிக்கொள்ள தான் இப்படி செய்கிறார்கள்.</p>
-<br>
-<br>
-
-<div class="video-container">
-<iframe width="1260" height="709" src="https://www.youtube.com/embed/ZjobD6vA5dQ?start=7007&end=7018" title="Karnan Tamil Full Movie HD | Shivaji Ganesan | Savithri | Ashokan | NTR | Super South Movies |" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-</div>
-
-<p>2000 வருஷத்துக்கும் மேல தமிழ் மன்னர்கள் கட்டி வைச்சிருந்த கோவில்ல இருந்து<br>“கலசம் புல்லிங்” செஞ்சிட்டு இதுக்கு பேரு லேட்டஸ்டு டேகுனாலஜி மெஷினு.<br>புல்லிங் பண்ணிட்டு அதுல ஒண்ணுமில்ல, அது மூடப் பழக்கம்னு படம் எடுத்துக் காட்டுறானுங்க. கூச்சமே இல்ல?</p>
-<h3 id="“கலச-புல்லிங்”-பாவ-காரியம்-என்றும்-மறைந்துவிடாது-அது-எப்படியோ-வெளி-வந்துவிடும்"><a href="#“கலச-புல்லிங்”-பாவ-காரியம்-என்றும்-மறைந்துவிடாது-அது-எப்படியோ-வெளி-வந்துவிடும்" class="headerlink" title="“கலச புல்லிங்” பாவ காரியம் என்றும் மறைந்துவிடாது. அது எப்படியோ வெளி வந்துவிடும்!"></a>“கலச புல்லிங்” பாவ காரியம் என்றும் மறைந்துவிடாது. அது எப்படியோ வெளி வந்துவிடும்!</h3><pre><code>பகவான் கிருஷ்ண பரமாத்மா
-</code></pre>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://thegti.xyz/2025/08/17/%E0%AE%B0%E0%AF%88%E0%AE%B8%E0%AF%8D-%E0%AE%AA%E0%AF%81%E0%AE%B2%E0%AF%8D%E0%AE%B2%E0%AE%BF%E0%AE%99%E0%AF%8D/" data-id="cmnewgimq001a8r28d41sg5jd" data-title=".&gt;&gt;&gt; ரைஸ் புல்லிங் 🚫 &lt;&lt;&lt; ||| &gt;&gt;&gt; கலசம் புல்லிங்  ✅  &lt;&lt;&lt;" class="article-share-link"><span class="fa fa-share">Share</span></a>
-      
-      
-      
-    </footer>
-  </div>
+  </a>
   
+  
+    <p class="article-excerpt">ஏதேனும் ஒரு பொருளைக் கண்டறிய வேண்டுமா? அந்தப் பொருளைக் கண்டறியும் திறன் கொண்ட ஒரு பார்வையாளர் இருக்க வேண்டும்.
+LHC இல் துரிதப்படுத்தப்பட்ட மற்றும் தெறிக்கும் துகள்களைக் காணலாம் ALICE, ATLAS, CMS மற்ற…</p>
+  
+  <a href="/2025/08/21/%E0%AE%AE%E0%AE%A9%E0%AE%BF%E0%AE%A4%E0%AE%B0%E0%AF%8D%E0%AE%95%E0%AE%B3%E0%AF%8D-%E0%AE%95%E0%AE%9F%E0%AE%B5%E0%AF%81%E0%AE%B3%E0%AF%88-%E0%AE%8E%E0%AE%AA%E0%AF%8D%E0%AE%AA%E0%AE%9F%E0%AE%BF-%E0%AE%85%E0%AE%9F%E0%AF%88%E0%AE%AF%E0%AE%BE%E0%AE%B3%E0%AE%AE%E0%AF%8D-%E0%AE%95%E0%AE%BE%E0%AE%A3%E0%AF%8D%E0%AE%95%E0%AE%BF%E0%AE%B1%E0%AE%BE%E0%AE%B0%E0%AF%8D%E0%AE%95%E0%AE%B3%E0%AF%8D/" class="read-more">Continue reading →</a>
 </article>
 
-
-
-  
-    <article id="post-கண்டன்-கடவுளை" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+    
+      <article class="article-card">
   <div class="article-meta">
-    <a href="/2025/08/16/%E0%AE%95%E0%AE%A3%E0%AF%8D%E0%AE%9F%E0%AE%A9%E0%AF%8D-%E0%AE%95%E0%AE%9F%E0%AE%B5%E0%AF%81%E0%AE%B3%E0%AF%88/" class="article-date">
-  <time class="dt-published" datetime="2025-08-15T20:00:38.000Z" itemprop="datePublished">16-08-2025</time>
-</a>
+    <span class="article-date">17 · 08 · 2025</span>
     
   </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
   
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/2025/08/16/%E0%AE%95%E0%AE%A3%E0%AF%8D%E0%AE%9F%E0%AE%A9%E0%AF%8D-%E0%AE%95%E0%AE%9F%E0%AE%B5%E0%AF%81%E0%AE%B3%E0%AF%88/">கடவுளை கண்டார்களா ?</a>
-    </h1>
-  
-
-      </header>
+  <a href="/2025/08/17/%E0%AE%B0%E0%AF%88%E0%AE%B8%E0%AF%8D-%E0%AE%AA%E0%AF%81%E0%AE%B2%E0%AF%8D%E0%AE%B2%E0%AE%BF%E0%AE%99%E0%AF%8D/" class="article-title">
+    .&gt;&gt;&gt; ரைஸ் புல்லிங் 🚫 &lt;&lt;&lt; ||| &gt;&gt;&gt; கலசம் புல்லிங்  ✅  &lt;&lt;&lt;
     
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <p>விஞ்ஞானிகள் பல ஆண்டுகளாக எலக்ட்ரான்கள், புரோட்டான்கள் மற்றும் நியூட்ரான்களைக் கண்டுபிடித்தனர், ஆனால் அவற்றின் நிறை எதனால் ஏற்பட்டது என்று அவர்களுக்குத் தெரியவில்லை? நிறை இல்லாத துகள்கள் கட்டுப்பாடுகள் இல்லாமல் சுதந்திரமாக நகரும். அந்த கட்டுப்பாடுகள் எதனால் ஏற்பட்டது என்பது ஒரு மர்மமாகவே இருந்தது (1964 இல் பீட்டர் ஹிக்ஸ் கோட்பாட்டளவில் ஹிக்ஸ் புலம் போன்ற மற்றொரு அடிப்படை புலம் இருக்கலாம் என்று கூறினார்), 2012 வரை.</p>
-<p><img src="https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExaTQ4cWZ6Mnc1aHJveGlmdmE4dXdmZTVuaDVmamR2eGozNTFkcTk2dSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/znx8wJvHXHovw4wokK/giphy.gif"></p>
-<p>ஒரு புதிய பகுதியில் என்ன இருக்கிறது என்பதை அறிய நாம் முதலில் கற்களை எறிந்து எதிர்வினைகளைக் கவனிக்கிறோம். நீர்நிலை இருந்தால் நாம் தண்ணீர் தெறிப்பதைக் கேட்கிறோம், பாறைகள் இருந்தால் பாறை மோதும் சத்தத்தைக் கேட்கிறோம், சேறு இருக்கும்போது ஒரு அமைதி கேட்கிறோம்.</p>
-<p><img src="https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExMjhhNTB1NXRhMnoycW4wMGQ5OHBpMTBmbmtobWx1eDR3b3Q3NTdubSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/l0Iy1R9uttEN2KCXe/giphy.gif"></p>
-<p>இதேபோல் LHC இல் ஒரு பரிசோதனை நடத்தப்பட்டது, ஒரு புரோட்டானையும் மற்றொரு புரோட்டானையும் மோதச் செய்வதன் மூலம் அவை புலங்களுடன் தொடர்பு கொள்ளும், இதன் விளைவாக ஏற்படும் தெறிப்பைக் காண முடியும்,  சோதனை தேவையான முடிவைக் கொடுத்தது, 125 GeV நிறை கொண்ட ஒரு புதிய துகள் LHC இல் காணப்பட்டது. இது பிரபஞ்சம் முழுவதும் ஹிக்ஸ் புலம் இருப்பதற்கான உறுதியான ஆதாரத்தை அளித்தது.</p>
-<h2 id="கடவுள்-தூணிலும்-இருப்பான்-துரும்பிலும்-இருப்பான்"><a href="#கடவுள்-தூணிலும்-இருப்பான்-துரும்பிலும்-இருப்பான்" class="headerlink" title="கடவுள் தூணிலும் இருப்பான், துரும்பிலும் இருப்பான்"></a>கடவுள் தூணிலும் இருப்பான், துரும்பிலும் இருப்பான்</h2><p>இது ஏன் கடவுள் துகள் என்று அழைக்கப்படுகிறது? ஏனென்றால் அது <strong>எல்லா இடங்களிலும் உள்ளது</strong>, மேலும் அது ஹிக்ஸ் புலத்துடன் தொடர்பு கொள்ளும்போது துகள்களுக்கு அவற்றின் நிறை அளித்தது. <strong>புரோட்டான், எலக்ட்ரான்கள் எங்கு சென்றாலும் அவை ஹிக்ஸ் புலத்துடன் தொடர்பு கொண்டு நிறை பெறுகின்றன</strong>, எனவே இது கடவுள் துகள் என்று அழைக்கப்படுகிறது. இதை “GOD DAMN துகள்” என்று அழைக்கும் மற்றொரு அதிகாரப்பூர்வ விளக்கம் உள்ளது.</p>
-<h4 id="கடவுளின்-துகளைக்-கண்டுபிடிக்க-என்ன-கூறுகள்-பயன்படுத்தப்பட்டன"><a href="#கடவுளின்-துகளைக்-கண்டுபிடிக்க-என்ன-கூறுகள்-பயன்படுத்தப்பட்டன" class="headerlink" title="கடவுளின் துகளைக் கண்டுபிடிக்க என்ன கூறுகள் பயன்படுத்தப்பட்டன?"></a>கடவுளின் துகளைக் கண்டுபிடிக்க என்ன கூறுகள் பயன்படுத்தப்பட்டன?</h4><table style="height: 317px; margin-left: auto; margin-right: auto;" border="border-color: #c40505ff" width="315">
-<tbody>
-<tr>
-<td style="width: 149.5px; text-align: center;">நவீன அறிவியல்</td>
-<td style="width: 110.5px; text-align: center;">தமிழ் மன்னர் கோயில்கள்</td>
-</tr>
-<tr>
-<td style="width: 149.5px; text-align: center;">&nbsp;<img src="https://newscenter.lbl.gov/wp-content/uploads/LHC-HQO2-at-LBL.jpg" alt="காந்தம்"></td>
-<td style="width: 149.5px; text-align: center;">&nbsp;<img src="/images/lodestone.jpg" alt="கிரானைட்"></td>
-</tr>
-<tr>
-<td style="width: 149.5px; text-align: center;">&nbsp;<img src="https://platform.theverge.com/wp-content/uploads/sites/2/chorus/uploads/chorus_asset/file/14003057/lhc2.1419970727.jpg?quality=90&strip=all&crop=2.3965691220989,0,95.206861755802,100&w=750" alt="செப்பு சுருள்"></td>
-<td style="width: 149.5px; text-align: center;">&nbsp;<img src="/images/chokurei_human.png" alt="நமது உடல் கடத்தியாக"></td>
-</tr>
-<tr>
-<td style="width: 149.5px; text-align: center;">&nbsp;<img src="https://www.lhc-closer.es/webapp/files/1435503941_46bdfdef2eaccb0efa16d19e1cad5e3d.jpg" alt="SRF Cavity"></td>
-<td style="width: 149.5px; text-align: center;">&nbsp;<img src="/images/kalasam.png" alt="கலசம்"></td>
-</tr>
-<tr>
-<td style="width: 100.5px; text-align: center;">&nbsp;<img src="https://videos.cern.ch/api/files/b4a47b60-e3fd-46c9-b80a-de42a040236d/frame-4.jpg?versionId=0f43ad46-c1a5-4de9-8fa5-46b482300531&download" alt="புரோட்டான் மூலம்"></td>
-<td style="width: 149.5px; text-align: center;">&nbsp;<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS4_9cS4-rUarrr_bDYy3L5rlcLxqsXIIcTTQ&s" alt="விண்வெளித் துகள்கள்"></td>
-</tr>
-</tbody>
-</table>
-
-<h3 id="ஹிக்ஸ்-போஸான்-தான்-கடவுளா"><a href="#ஹிக்ஸ்-போஸான்-தான்-கடவுளா" class="headerlink" title="ஹிக்ஸ் போஸான் தான் கடவுளா?"></a>ஹிக்ஸ் போஸான் தான் கடவுளா?</h3><p>இல்லை, நான் ஹிக்ஸ் போஸான் கடவுள் என்று சொல்ல வரவில்லை. கடவுளைக் வணங்கவும், மக்களின் உயிர் ஆற்றலை சீர் செய்யவும், தமிழ் மன்னர் கோயில்களின் அதே கூறுகளைப் LHC விஞ்ஞானிகள் பயன்படுத்தினார்கள் என்றும், அவர்களின் கண்டுபிடிப்பு பற்றிய அறிக்கைகள் மட்டுமே நான் சொன்னேன்.</p>
-<p>அவர்கள் கடவுளை கண்டார்களா என்றும் சொல்லவில்லை. அவர்கள் அந்த துகளை கடவுளின் துகள் என்றும் கடவுள் சாபம் பெற்ற துகள் என்று இரு வேறு கருத்துக்களை சொல்லி குழப்பம் செய்கிறார்கள்.</p>
-<h3 id="CERN-ல்-வேறு-என்ன-செய்தார்கள்"><a href="#CERN-ல்-வேறு-என்ன-செய்தார்கள்" class="headerlink" title="CERN-ல் வேறு என்ன செய்தார்கள்?"></a>CERN-ல் வேறு என்ன செய்தார்கள்?</h3><p>நீங்களே பாருங்கள்.</p>
-<div class="video-container"><iframe src="https://www.youtube.com/embed/f66lLRSQHAU" frameborder="0" loading="lazy" allowfullscreen></iframe></div>
-
-<p>CERN, ஒரு அறிவியல் பிராந்தியத்தில் ஏன் இந்த வினோதமான நடனமும், கோரமான நாடகமும்? அவர்கள் உலகிற்கு என்ன சொல்கிறார்கள்? இதிலிருந்து நாம் ஒரு தெளிவான முடிவுக்கும் வர முடியாது, எதையும் யூகிக்க முடியாது. நாம் அவர்களிடம் எதையும் எதிர்பார்க்க முடியாது.</p>
-<p><strong><em>அதைப் பற்றி நாம் கவலைப்பட வேண்டாம் என்று பரிந்துரைக்கிறேன்.</em></strong></p>
-<p>ஆனாலும் அவர்கள் <strong>நமது சிவபெருமானை இறைவன்</strong> என்று அழைக்கின்றனர். எப்படி, எதனால் என்று சொல்லவில்லை.</p>
-<hr>
-<h4 id="இந்த-CERN-திட்டத்திலிருந்து-நாம்-என்ன-தெரிந்து-கொள்ள-முடியும்"><a href="#இந்த-CERN-திட்டத்திலிருந்து-நாம்-என்ன-தெரிந்து-கொள்ள-முடியும்" class="headerlink" title="இந்த CERN திட்டத்திலிருந்து நாம் என்ன தெரிந்து கொள்ள முடியும்?"></a>இந்த CERN திட்டத்திலிருந்து நாம் என்ன தெரிந்து கொள்ள முடியும்?</h4><p>தமிழ் மன்னர்கள் பயன்படுத்திய அடிப்படை பொருட்களை வைத்து, CERNல் அவர்கள் செய்த ஆராய்ச்சியில் இருந்து பலவற்றை நாம் அறிந்து கொள்ளலாம்.</p>
-<p>நமக்கு கிடைத்த முக்கிய விடயம் இது தான்.</p>
-<p><img src="https://www.swissinfo.ch/content/wp-content/uploads/sites/13/2008/03/dc96ccca783b7a9444c42b04bfca9721-sriimg20080331_8915220_0-data.jpg?crop=0px,0px,450px,268px&w=450&ver=25367691" alt="LHC நிலத்தடியில் கட்டப்பட்டது, பல முடுக்கிகள் மற்றும் கண்டுபிடிப்பான்களைக் கொண்டுள்ளது."></p>
-<p><img src="https://media.springernature.com/lw685/springer-static/image/chp%3A10.1007%2F978-3-030-00650-1_4/MediaObjects/471856_1_En_4_Fig1_HTML.gif" alt="துகள் முடுக்கிகள் மற்றும் கண்டுபிடிப்பான்களுடன் கூடிய LHC இன் வரைவு."></p>
-<p>ஹைட்ரஜனில் இருந்து வரும் புரோட்டான்கள் முதலில் LINAC இல் 50 MeV ஆகவும், பின்னர் புரோட்டான் சின்க்ரோட்ரான் பூஸ்டரில் 1.5 GeV ஆகவும், பின்னர் புரோட்டான் சின்க்ரோட்ரானில் 26 GeV ஆகவும், சூப்பர் புரோட்டான் சின்க்ரோட்ரானில் 450 GeV ஆகவும் நேரியல் முறையில் முடுக்கிவிடப்படுகின்றன. கடைசியாக புரோட்டான்கள் LHC க்குள் செலுத்தப்படுகின்றன, அங்கு SRF குழிகள் (கலசம்) துகள்களை 7 TeV ஆக துரிதப்படுத்தும் மின்சார புலத்தை வழங்குகின்றன.</p>
-<p><img src="https://home.cern/modules/custom/cern-loading/images/loader.gif" alt="LHC Acceleration"></p>
-<p>மின்சாரம் மற்றும் காந்தப்புலங்களில் வட்டப் பாதையில் நகர்வதன் மூலம் துகள்கள் ஆற்றலைப் பெறும்.</p>
-<p><img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiFZsvyn2rz0mCiHHgzAuqe890huhqvtRS5rbEOl85of25CIL6Qj9gvrG_JsmQ2b4_vHKWGcRvUDf1JGeBlZzr3KAwjEiiyqGk3-VN7phSgKZHN1x9YygE0XfggsluK8Y2mfBiREJQGmAaA/s640/circumambulation+map.jpg" alt="நமது கோயில் பிரகார வலம் பாதை"></p>
-<p>நமது கோயில்களில் இதுதான் நடக்கிறது, கலசம் (SRF cavity) மின்சார புலங்களை வழங்குகிறது, அதே நேரத்தில் கிரானைட்டால் ஆன கோயில் சுவர்கள் காந்தப்புலங்களை உருவாக்குகின்றன. துகள்களைப் போலவே, கோயிலைச் சுற்றி ஒரு வட்ட இயக்கத்தில் நாம் நகருகிறோம், இதன் மூலம் LHC இல் உள்ள புரோட்டான்களைப் போன்ற ஆற்றலைப் பெறுகிறோம்.</p>
-<p> மக்களுக்கு  உயிர் ஆற்றல் சிகிச்சை மட்டும் தான் கோவில்களா?</p>
-<p>இல்லை CERNவிட பல்லாயிரம் மடங்கு அறிவாற்றல் பெற்றவர்களால் கோவில்கள் கட்டப்பட்டன. கடவுள் என்பது சக்தி&#x2F;உயிர் சக்தி அதை LHC துகள் கண்டுபிடிப்பான்கள் உணர்வது போல, மனிதர்களும் உணர்வார்கள்.  LHCல் எந்த  மூலப் பொருள் புரோட்டான்களை தருகிறது? ஹைட்ரஜன் வாயு. அதே போல கோயில்களில் எந்த மூலப் பொருள் துகள்களை தருகிறது? மூலவர்  என்று ஒருவர்  எதற்கு இருக்கிறார்?</p>
-<p><img src="/images/rajarajachozhan.jpg"></p>
-<p>நமக்கு பல்லாயிர வருடங்கள் உடல்  மற்றும் மன நலனை காக்க கோவில்களை கொடுத்துச் சென்றுள்ளனர் நமது தமிழ் மன்னர்கள்.</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://thegti.xyz/2025/08/16/%E0%AE%95%E0%AE%A3%E0%AF%8D%E0%AE%9F%E0%AE%A9%E0%AF%8D-%E0%AE%95%E0%AE%9F%E0%AE%B5%E0%AF%81%E0%AE%B3%E0%AF%88/" data-id="cmnewgimm000m8r28b70f5lu3" data-title="கடவுளை கண்டார்களா ?" class="article-share-link"><span class="fa fa-share">Share</span></a>
-      
-      
-      
-    </footer>
-  </div>
+  </a>
   
+  
+    <p class="article-excerpt">
+
+
+இது வரையில் நாம் CERN, LHC, particle accelerators பார்த்து தெரிந்தவற்றை அப்படியே படக் காட்சிகளாக எடுத்து உண்மைகளை புட்டு புட்டு வைத்திருக்கிறார்கள். ஆனாலும் கலசத்தின் இந்த தன்மையை “நம்மிடம்” இருந்…</p>
+  
+  <a href="/2025/08/17/%E0%AE%B0%E0%AF%88%E0%AE%B8%E0%AF%8D-%E0%AE%AA%E0%AF%81%E0%AE%B2%E0%AF%8D%E0%AE%B2%E0%AE%BF%E0%AE%99%E0%AF%8D/" class="read-more">Continue reading →</a>
 </article>
 
-
-
-  
-
-
-  <nav id="page-nav">
     
-    <a class="extend prev" rel="prev" href="/page/11/">&laquo; Prev</a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/10/">10</a><a class="page-number" href="/page/11/">11</a><span class="page-number current">12</span><a class="page-number" href="/page/13/">13</a><a class="page-number" href="/page/14/">14</a><a class="page-number" href="/page/15/">15</a><a class="extend next" rel="next" href="/page/13/">Next &raquo;</a>
-  </nav>
 
-</section>
-        
-      </div>
-      <footer id="footer">
-  
-  <div class="outer">
-    <div id="footer-info" class="inner">
+    
       
-      &copy; 2026 R Stalin<br>
-      Powered by <a href="https://thegti.xyz" target="_blank">The GTI</a>
+      <nav class="pagination">
+        
+          <a href="/page/11/" class="page-btn">← Prev</a>
+        
+        
+          <a href="/" class="page-btn">01</a>
+          <span class="page-btn page-ellipsis">…</span>
+        
+        
+          <a href="/page/10"
+             class="page-btn">
+            10
+          </a>
+        
+          <a href="/page/11"
+             class="page-btn">
+            11
+          </a>
+        
+          <a href="/page/12"
+             class="page-btn active">
+            12
+          </a>
+        
+          <a href="/page/13"
+             class="page-btn">
+            13
+          </a>
+        
+          <a href="/page/14"
+             class="page-btn">
+            14
+          </a>
+        
+        
+          
+          <a href="/page/15" class="page-btn">15</a>
+        
+        
+          <a href="/page/13/" class="page-btn">Next →</a>
+        
+      </nav>
+    
+  </main>
+
+  <aside class="sidebar">
+  <div class="sidebar-section">
+    <div class="sidebar-heading">Topics</div>
+    <div class="tag-cloud">
+      
+        <a href="/tags/666/" class="tag-pill">666</a>
+      
     </div>
   </div>
+  <div class="sidebar-section">
+    <div class="sidebar-heading">Archive</div>
+    <ul class="archive-list">
+      
+        <li class="archive-item">
+          <a href="/2026/04/01/The-Second-House/">இரண்டாம் வீடு(PAAVAM) - Second House</a>
+          <span class="archive-count">04/26</span>
+        </li>
+      
+        <li class="archive-item">
+          <a href="/2026/03/31/Fear-it/">கவலை வேண்டாமா?</a>
+          <span class="archive-count">03/26</span>
+        </li>
+      
+        <li class="archive-item">
+          <a href="/2026/03/30/The-Devil-s-Image/">பிசாசின் உருவம் The Devil&#39;s Image</a>
+          <span class="archive-count">03/26</span>
+        </li>
+      
+        <li class="archive-item">
+          <a href="/2026/03/29/All-rounder-666/">ஜெயலலிதா எனும் நான் ஒரு 666</a>
+          <span class="archive-count">03/26</span>
+        </li>
+      
+        <li class="archive-item">
+          <a href="/2026/03/28/Check-123-Check/">Check 123 Check</a>
+          <span class="archive-count">03/26</span>
+        </li>
+      
+    </ul>
+  </div>
+  <div class="sidebar-section">
+    <div class="sidebar-heading">About</div>
+    <p style="font-size:14px;color:var(--text-muted);line-height:1.7;font-weight:300">Written by R. Stalin. Exploring connections between ancient esoteric traditions and modern history.</p>
+  </div>
+</aside>
+
+</div>
+
+  </div>
+  <footer class="site-footer">
+  <span class="footer-text">© 2026 <span>R Stalin</span> · The GTI</span>
 </footer>
 
-<script>
-  function toggleText() {
-    const text = document.getElementById("hiddenText");
-    text.style.display = (text.style.display === "none") ? "block" : "none";
-  }
-</script>
-
+  <!-- Quick Action Button -->
+  <div class="qab notranslate">
+    <button class="qab-btn" aria-label="Quick actions" aria-expanded="false">···</button>
+    <div class="qab-panel">
+      <button id="theme-toggle" class="theme-toggle qab-action" aria-label="Toggle theme">☾ Dark</button>
+      <select id="lang-select" class="lang-select qab-action" aria-label="Language">
+        <option value="en">EN</option>
+        <option value="ta">தமிழ்</option>
+        <option value="hi">हिन्दी</option>
+        <option value="kn">ಕನ್ನಡ</option>
+        <option value="ml">മലയാളം</option>
+        <option value="te">తెలుగు</option>
+        <option value="zh-CN">中文</option>
+        <option value="es">Español</option>
+        <option value="fr">Français</option>
+        <option value="de">Deutsch</option>
+        <option value="ru">Русский</option>
+        <option value="ar">العربية</option>
+        <option value="ja">日本語</option>
+      </select>
+      <div class="qab-divider"></div>
+      <button class="qab-scroll qab-action" data-scroll="top" aria-label="Scroll to top">↑ Top</button>
+      <button class="qab-scroll qab-action" data-scroll="mid" aria-label="Scroll to middle">↕ Mid</button>
+      <button class="qab-scroll qab-action" data-scroll="bottom" aria-label="Scroll to bottom">↓ Bottom</button>
     </div>
-    <nav id="mobile-nav">
-  
-    <a href="/" class="mobile-nav-link">Home</a>
-  
-    <a href="/archives" class="mobile-nav-link">Archives</a>
-  
-</nav>
-    
-
-
-<script src="/js/jquery-3.6.4.min.js"></script>
-
-
-
-  
-<script src="/fancybox/jquery.fancybox.min.js"></script>
-
-
-
-
-<script src="/js/script.js"></script>
-
-
-
-
-
   </div>
+
+  <script src="/js/theme.js"></script>
+  <script src="/js/i18n.js"></script>
+  <script src="/js/lottie-intro.js"></script>
 </body>
 </html>
