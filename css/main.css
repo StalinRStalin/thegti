@@ -855,6 +855,15 @@ body {
   font-family: "Noto Serif Telugu", var(--font-serif);
 }
 
+/* ─── Desktop typography (≥1024px) ─── */
+/* Matches the "good at 125% zoom" feel: 18px × 1.25 ≈ 22px */
+@media (min-width: 1024px) {
+  body {
+    font-size: 22px;
+    line-height: 1.75;
+  }
+}
+
 /* ─── Lottie Intro Overlay ─── */
 #lottie-intro-overlay {
   position: fixed;
