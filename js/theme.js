@@ -64,6 +64,64 @@
 
     window.addEventListener('scroll', updateProgress, { passive: true });
 
+    // ── Post navigation — edge swipe (mobile/tablet) ──────────────
+    var prevBtn = document.querySelector('.post-nav-prev:not(.post-nav-disabled)');
+    var nextBtn = document.querySelector('.post-nav-next:not(.post-nav-disabled)');
+
+    if (prevBtn || nextBtn) {
+      // Inject swipe hint elements
+      var prevHint = document.createElement('div');
+      prevHint.className = 'post-nav-prev-hint';
+      var nextHint = document.createElement('div');
+      nextHint.className = 'post-nav-next-hint';
+      document.body.appendChild(prevHint);
+      document.body.appendChild(nextHint);
+
+      var EDGE_ZONE  = 30;  // px from screen edge to start tracking
+      var MIN_SWIPE  = 60;  // px minimum horizontal travel to trigger nav
+      var touchStartX = null;
+      var touchStartY = null;
+      var trackingEdge = null; // 'left' | 'right' | null
+
+      document.addEventListener('touchstart', function (e) {
+        var x = e.touches[0].clientX;
+        var y = e.touches[0].clientY;
+        touchStartX = x;
+        touchStartY = y;
+        if (x < EDGE_ZONE && prevBtn) {
+          trackingEdge = 'left';
+          prevHint.classList.add('active');
+        } else if (x > window.innerWidth - EDGE_ZONE && nextBtn) {
+          trackingEdge = 'right';
+          nextHint.classList.add('active');
+        } else {
+          trackingEdge = null;
+        }
+      }, { passive: true });
+
+      document.addEventListener('touchmove', function (e) {
+        if (!trackingEdge) return;
+        var dx = e.touches[0].clientX - touchStartX;
+        var dy = e.touches[0].clientY - touchStartY;
+        // Cancel if scrolling vertically more than horizontally
+        if (Math.abs(dy) > Math.abs(dx) * 1.5) {
+          trackingEdge = null;
+          prevHint.classList.remove('active');
+          nextHint.classList.remove('active');
+        }
+      }, { passive: true });
+
+      document.addEventListener('touchend', function (e) {
+        var dx = e.changedTouches[0].clientX - touchStartX;
+        prevHint.classList.remove('active');
+        nextHint.classList.remove('active');
+        if (!trackingEdge) return;
+        if (trackingEdge === 'left'  && dx >  MIN_SWIPE && prevBtn) window.location.href = prevBtn.href;
+        if (trackingEdge === 'right' && dx < -MIN_SWIPE && nextBtn) window.location.href = nextBtn.href;
+        trackingEdge = null;
+      }, { passive: true });
+    }
+
     // ── Quick Action Button (FAB) ──────────────────────────────────
     var qab = document.querySelector('.qab');
     var qabBtn = document.querySelector('.qab-btn');

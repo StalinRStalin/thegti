@@ -180,7 +180,7 @@ body {
 /* ─── Quick Action Button (FAB) ─── */
 .qab {
   position: fixed;
-  bottom: 24px;
+  bottom: 130px;
   right: 20px;
   z-index: 500;
   display: flex;
@@ -627,9 +627,9 @@ body {
 
 .tag-pill {
   font-family: var(--font-mono);
-  font-size: 8px;
+  font-size: 12px;
   letter-spacing: 0.1em;
-  padding: 4px 9px;
+  padding: 6px 14px;
   background: var(--bg2);
   border: 0.5px solid var(--border-hover);
   border-radius: var(--radius);
@@ -862,6 +862,93 @@ body {
     font-size: 22px;
     line-height: 1.75;
   }
+}
+
+/* ─── Post Navigation (prev / next) ─── */
+.post-nav {
+  display: contents;
+}
+
+.post-nav-btn {
+  position: fixed;
+  bottom: 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  max-width: 120px;
+  padding: 10px 14px;
+  background: var(--bg2);
+  border: 0.5px solid var(--border-hover);
+  border-radius: 16px;
+  color: var(--text-muted);
+  text-decoration: none;
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: 0.08em;
+  transition: all var(--transition);
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.3);
+  z-index: 400;
+}
+
+.post-nav-btn:hover {
+  border-color: var(--gold-border);
+  color: var(--gold);
+  box-shadow: 0 4px 16px rgba(200, 169, 110, 0.2);
+}
+
+.post-nav-prev { left: 20px; }
+.post-nav-next { right: 20px; }
+
+.post-nav-arrow {
+  font-size: 18px;
+  line-height: 1;
+  color: var(--gold);
+}
+
+.post-nav-label {
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--text-faint);
+}
+
+.post-nav-title {
+  font-family: var(--font-serif);
+  font-size: 11px;
+  font-weight: 400;
+  letter-spacing: 0;
+  color: var(--text-muted);
+  text-align: center;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 100px;
+}
+
+.post-nav-disabled { display: none; }
+
+/* ── Mobile / tablet: hide buttons, swipe handles navigation ── */
+@media (max-width: 1023px) {
+  .post-nav-btn { display: none; }
+
+  /* Swipe hint edges — subtle visual affordance */
+  .post-nav-prev-hint,
+  .post-nav-next-hint {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    width: 6px;
+    z-index: 300;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+  .post-nav-prev-hint { left: 0;  background: linear-gradient(to right, rgba(200,169,110,0.35), transparent); }
+  .post-nav-next-hint { right: 0; background: linear-gradient(to left,  rgba(200,169,110,0.35), transparent); }
+  .post-nav-prev-hint.active,
+  .post-nav-next-hint.active { opacity: 1; }
 }
 
 /* ─── Lottie Intro Overlay ─── */
