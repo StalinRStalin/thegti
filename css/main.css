@@ -45,7 +45,7 @@
   font-size: 16px;
 }
 [data-theme="light"] .nav-links a {
-  font-size: 11px;
+  font-size: 18px;
 }
 
 /* ─── Reset ─── */
@@ -157,14 +157,14 @@ body {
 
 .nav-links {
   display: flex;
-  gap: 24px;
+  gap: 18px;
   list-style: none;
   align-items: center;
 }
 
 .nav-links a {
   font-family: var(--font-mono);
-  font-size: 13px;
+  font-size: 18px;
   font-weight: 700;
   letter-spacing: 0.15em;
   color: var(--text);
@@ -382,8 +382,8 @@ body {
 }
 
 .article-date {
-  font-family: var(--font-mono);
-  font-size: 11px;
+  font-family: var(--font-serif);
+  font-size: 16px;
   font-weight: 700;
   color: var(--text-muted);
   letter-spacing: 0.1em;
@@ -465,7 +465,7 @@ body {
 
 .read-more {
   font-family: var(--font-mono);
-  font-size: 11px;
+  font-size: 12px;
   font-weight: 700;
   letter-spacing: 0.12em;
   color: var(--gold);
@@ -589,7 +589,7 @@ body {
 
 .sidebar-heading {
   font-family: var(--font-mono);
-  font-size: 8px;
+  font-size: 13px;
   letter-spacing: 0.3em;
   color: var(--text-faint);
   text-transform: uppercase;
@@ -627,9 +627,9 @@ body {
 
 .tag-pill {
   font-family: var(--font-mono);
-  font-size: 12px;
+  font-size: 15px;
   letter-spacing: 0.1em;
-  padding: 6px 14px;
+  padding: 8px 16px;
   background: var(--bg2);
   border: 0.5px solid var(--border-hover);
   border-radius: var(--radius);
@@ -671,7 +671,7 @@ body {
 
 .archive-count {
   font-family: var(--font-mono);
-  font-size: 9px;
+  font-size: 12px;
   color: var(--text-faint);
 }
 
@@ -861,6 +861,9 @@ body {
   body {
     font-size: 22px;
     line-height: 1.75;
+  }
+  .site-header {
+    position: static;
   }
 }
 
