@@ -525,6 +525,11 @@ body {
   margin-bottom: 1.4em;
 }
 
+.post-body .br-spacer {
+  display: block;
+  height: 15px;
+}
+
 .post-full .post-body .post-img-figure {
   margin: 1.5em auto;
   max-width: 100%;

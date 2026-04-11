@@ -62,6 +62,13 @@
       showThemeHint(toggleBtn);
     }
 
+    // Replace <br> tags in post body with visible spacer divs
+    document.querySelectorAll('.post-body br').forEach(function (br) {
+      var spacer = document.createElement('div');
+      spacer.className = 'br-spacer';
+      br.parentNode.replaceChild(spacer, br);
+    });
+
     window.addEventListener('scroll', updateProgress, { passive: true });
 
     // ── Post navigation — edge swipe (mobile/tablet) ──────────────
